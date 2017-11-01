@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns = "http://www.coffeeShop.com.vn"
+           targetNamespace="http://www.coffeeShop.com.vn"
+           elementFormDefault="qualified">
+    <xs:element name="categories" type="listCategory"/>
+    <xs:complexType name="listCategory">
+        <xs:sequence>
+            <xs:element name="category" type="Category" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Category">
+        <xs:sequence>
+            <xs:element name="id" type="xs:integer"/>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="product" type="Product" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Product">
+        <xs:sequence>
+            <xs:element name="id" type="xs:integer"/>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="productItem" type="ProductItem" maxOccurs="unbounded"/>
+            <xs:element name="imgLink" type="xs:string"/>
+            <xs:element name="material" type="xs:string"/>
+            <xs:element name="description" type="xs:string"/>
+        </xs:sequence> 
+    </xs:complexType>
+    <xs:complexType name="ProductItem">
+        <xs:sequence>
+            <xs:element name="price" type="xs:decimal"/>
+            <xs:element name="competitorName" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+</xs:schema>
+

@@ -1,0 +1,389 @@
+[
+    {
+        "product_id": 2761488,
+        "code": "2761488",
+        "base_price": "24000",
+        "product_name": "Yogust milk tea",
+        "variants": false,
+        "categ_id": 188482,
+        "description": "Trà sữa thạch thủy tinh (Yogust)"
+    },
+    {
+        "product_id": 3043512,
+        "code": "CF0001",
+        "base_price": "15000",
+        "product_name": "Black coffee",
+        "variants": false,
+        "categ_id": 188414,
+        "description": "Cà phê đen"
+    },
+    {
+        "product_id": 3043665,
+        "code": "CF0003",
+        "base_price": "18000",
+        "product_name": "Milk coffee",
+        "variants": false,
+        "categ_id": 188414,
+        "description": "Cà phê sữa"
+    },
+    {
+        "product_id": 3043713,
+        "code": "TE0001",
+        "base_price": "19000",
+        "product_name": "Black Tea",
+        "variants": false,
+        "categ_id": 188434,
+        "description": "Hồng trà"
+    },
+    {
+        "product_id": 3043754,
+        "code": "TE0002",
+        "base_price": "19000",
+        "product_name": "Lime Tea",
+        "variants": false,
+        "categ_id": 188434,
+        "description": "Trà chanh"
+    },
+    {
+        "product_id": 3043770,
+        "code": "TE0003",
+        "base_price": "19000",
+        "product_name": "Lipton tea",
+        "variants": false,
+        "categ_id": 188434,
+        "description": "Trà Lipton"
+    },
+    {
+        "product_id": 3043771,
+        "code": "TE0004",
+        "base_price": "29000",
+        "product_name": "Lychee tea",
+        "variants": false,
+        "categ_id": 188434,
+        "description": "Trà vải"
+    },
+    {
+        "product_id": 3043772,
+        "code": "TE0005",
+        "base_price": "29000",
+        "product_name": "Peach tea",
+        "variants": false,
+        "categ_id": 188434,
+        "description": "Trà đào"
+    },
+    {
+        "product_id": 3043807,
+        "code": "SO0001",
+        "base_price": "29000",
+        "product_name": "Marshall Eriksen",
+        "variants": false,
+        "categ_id": 188454,
+        "description": ""
+    },
+    {
+        "product_id": 3043815,
+        "code": "SO0002",
+        "base_price": "29000",
+        "product_name": "Robin Scherbatsky",
+        "variants": false,
+        "categ_id": 188454,
+        "description": ""
+    },
+    {
+        "product_id": 3043825,
+        "code": "SO0003",
+        "base_price": "29000",
+        "product_name": "Barney Stinson",
+        "variants": false,
+        "categ_id": 188454,
+        "description": ""
+    },
+    {
+        "product_id": 3043826,
+        "code": "SO0004",
+        "base_price": "29000",
+        "product_name": "Ted Mosby",
+        "variants": false,
+        "categ_id": 188454,
+        "description": ""
+    },
+    {
+        "product_id": 3043831,
+        "code": "SO0005",
+        "base_price": "29000",
+        "product_name": "Ranjit Singh",
+        "variants": false,
+        "categ_id": 188454,
+        "description": ""
+    },
+    {
+        "product_id": 3043835,
+        "code": "SO0006",
+        "base_price": "29000",
+        "product_name": "Lily Aldrin",
+        "variants": false,
+        "categ_id": 188454,
+        "description": ""
+    },
+    {
+        "product_id": 3043842,
+        "code": "SO0007",
+        "base_price": "29000",
+        "product_name": "Zoey Pierson",
+        "variants": false,
+        "categ_id": 188454,
+        "description": ""
+    },
+    {
+        "product_id": 3043845,
+        "code": "SO0008",
+        "base_price": "29000",
+        "product_name": "Tracy McConnell",
+        "variants": false,
+        "categ_id": 188454,
+        "description": ""
+    },
+    {
+        "product_id": 3043875,
+        "code": "YS0001",
+        "base_price": "29000",
+        "product_name": "Passion fruit YS",
+        "variants": false,
+        "categ_id": 188477,
+        "description": "SCL Chanh dây"
+    },
+    {
+        "product_id": 3043879,
+        "code": "YS0002",
+        "base_price": "29000",
+        "product_name": "Black Currant YS",
+        "variants": false,
+        "categ_id": 188477,
+        "description": "SCL Nho đen"
+    },
+    {
+        "product_id": 3043880,
+        "code": "YS0003",
+        "base_price": "29000",
+        "product_name": "Blueberry YS",
+        "variants": false,
+        "categ_id": 188477,
+        "description": "SCL Việt quất"
+    },
+    {
+        "product_id": 3043883,
+        "code": "YS0004",
+        "base_price": "29000",
+        "product_name": "Strawberry YS",
+        "variants": false,
+        "categ_id": 188477,
+        "description": "SCL Dâu"
+    },
+    {
+        "product_id": 3043889,
+        "code": "YS0005",
+        "base_price": "29000",
+        "product_name": "Raspberry YS",
+        "variants": false,
+        "categ_id": 188477,
+        "description": "SCL Phúc bồn tử"
+    },
+    {
+        "product_id": 3043976,
+        "code": "YS0006",
+        "base_price": "29000",
+        "product_name": "Mango YS",
+        "variants": false,
+        "categ_id": 188477,
+        "description": "SCL Xoài"
+    },
+    {
+        "product_id": 3044133,
+        "code": "MS0001",
+        "base_price": "29000",
+        "product_name": "Matcha MS",
+        "variants": false,
+        "categ_id": 188483,
+        "description": "Matcha MS"
+    },
+    {
+        "product_id": 3044139,
+        "code": "MS0002",
+        "base_price": "29000",
+        "product_name": "Chocolate MS",
+        "variants": false,
+        "categ_id": 188483,
+        "description": "Chocolate MS"
+    },
+    {
+        "product_id": 3044153,
+        "code": "IB0001",
+        "base_price": "34000",
+        "product_name": "Matcha IB",
+        "variants": false,
+        "categ_id": 188486,
+        "description": "Matcha ĐX"
+    },
+    {
+        "product_id": 3044159,
+        "code": "IB0002",
+        "base_price": "34000",
+        "product_name": "Chocolate IB",
+        "variants": false,
+        "categ_id": 188486,
+        "description": "Sô-cô-la ĐX"
+    },
+    {
+        "product_id": 3044163,
+        "code": "IB0003",
+        "base_price": "34000",
+        "product_name": "Cookie IB",
+        "variants": false,
+        "categ_id": 188486,
+        "description": "Cookie ĐX"
+    },
+    {
+        "product_id": 3044169,
+        "code": "IB0004",
+        "base_price": "34000",
+        "product_name": "Mocha IB",
+        "variants": false,
+        "categ_id": 188486,
+        "description": "Mocha ĐX"
+    },
+    {
+        "product_id": 3044177,
+        "code": "IB0005",
+        "base_price": "34000",
+        "product_name": "Coffee IB",
+        "variants": false,
+        "categ_id": 188486,
+        "description": "Cà phê đá xay"
+    },
+    {
+        "product_id": 3044178,
+        "code": "ST0001",
+        "base_price": "34000",
+        "product_name": "Passion Fruit IB ",
+        "variants": false,
+        "categ_id": 188486,
+        "description": "Chanh dây ĐX"
+    },
+    {
+        "product_id": 3044179,
+        "code": "ST0002",
+        "base_price": "34000",
+        "product_name": "Black currant IB",
+        "variants": false,
+        "categ_id": 188486,
+        "description": "Nho đen ĐX"
+    },
+    {
+        "product_id": 3044180,
+        "code": "ST0006",
+        "base_price": "34000",
+        "product_name": "Mango IB",
+        "variants": false,
+        "categ_id": 188486,
+        "description": "Xoài ĐX"
+    },
+    {
+        "product_id": 3044181,
+        "code": "ST0004",
+        "base_price": "34000",
+        "product_name": "Strawberry IB",
+        "variants": false,
+        "categ_id": 188486,
+        "description": "Dâu ĐX"
+    },
+    {
+        "product_id": 3044182,
+        "code": "ST0005",
+        "base_price": "34000",
+        "product_name": "Raspberry IB",
+        "variants": false,
+        "categ_id": 188486,
+        "description": "Phúc bồn tử ĐX"
+    },
+    {
+        "product_id": 3044250,
+        "code": "TS0001",
+        "base_price": "24000",
+        "product_name": "Fruit milk tea",
+        "variants": false,
+        "categ_id": 188482,
+        "description": "Trà sữa thạch trái cây"
+    },
+    {
+        "product_id": 3044252,
+        "code": "TS0002",
+        "base_price": "24000",
+        "product_name": "Green milk tea",
+        "variants": false,
+        "categ_id": 188482,
+        "description": "Trà sữa thái xanh"
+    },
+    {
+        "product_id": 3044254,
+        "code": "TS0003",
+        "base_price": "24000",
+        "product_name": "Red milk tea",
+        "variants": false,
+        "categ_id": 188482,
+        "description": "Trà sữa thái đỏ"
+    },
+    {
+        "product_id": 3044256,
+        "code": "TS0004",
+        "base_price": "24000",
+        "product_name": "Mint milk tea",
+        "variants": false,
+        "categ_id": 188482,
+        "description": "Trà sữa bạc hà"
+    },
+    {
+        "product_id": 3044258,
+        "code": "TS0005",
+        "base_price": "32000",
+        "product_name": "Peach milk tea",
+        "variants": false,
+        "categ_id": 188482,
+        "description": "Trà sữa đào"
+    },
+    {
+        "product_id": 3098110,
+        "code": "PP0001",
+        "base_price": 1000,
+        "product_name": "Phụ Phí",
+        "variants": false,
+        "categ_id": 192122,
+        "description": "Phụ Phí"
+    },
+    {
+        "product_id": 9121423,
+        "code": "9121423",
+        "base_price": "34000",
+        "product_name": "Black tea Machiato",
+        "variants": false,
+        "categ_id": 188434,
+        "description": "Hồng trà Machiato"
+    },
+    {
+        "product_id": 9126876,
+        "code": "ST0003",
+        "base_price": "34000",
+        "product_name": "Blueberrry IB",
+        "variants": false,
+        "categ_id": 188486,
+        "description": "Việt quốc ĐX"
+    },
+    {
+        "product_id": 9132963,
+        "code": "MT0007",
+        "base_price": "32000",
+        "product_name": "Flan milk tea",
+        "variants": false,
+        "categ_id": 188482,
+        "description": "Trà sữa bánh flan"
+    }
+]

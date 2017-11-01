@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns = "http://www.coffeeShop.com.vn"
+           targetNamespace="http://www.coffeeShop.com.vn"
+           elementFormDefault="qualified">
+    <xs:element name="Orders" type="orders"/>
+    <xs:complexType name="orders">
+        <xs:sequence>
+            <xs:element name="orderItem" type="OrderItem" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="OrderItem">
+        <xs:sequence>
+            <xs:element name="listBillItemDTO" type="ListBillItemDTO" maxOccurs="unbounded"/>
+            <xs:element name="note" type="xs:string" minOccurs="0"/>
+            <xs:element name="paymentDate" type="xs:string"/>
+            <xs:element name="promotion" type="xs:integer" minOccurs="0"/>
+            <xs:element name="tableName" type="xs:integer"/>
+            <xs:element name="total" type="xs:decimal"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ListBillItemDTO">
+        <xs:sequence>
+            <xs:element name="billId" type="xs:integer"/>
+            <xs:element name="productId" type="xs:integer"/>
+            <xs:element name="quantity" type="xs:integer"/>
+        </xs:sequence> 
+    </xs:complexType>
+    
+</xs:schema>
+
+

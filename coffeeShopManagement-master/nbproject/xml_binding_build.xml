@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+            *** GENERATED FROM xml_binding_cfg.xml - DO NOT EDIT  ***
+            *** Configure thru JAXB Wizard.                       ***
+        --><project name="coffeeShopManagement_jaxb" default="default" basedir=".">
+    <target name="xjc-typedef-target" depends="-init-project">
+        <typedef classname="com.sun.tools.xjc.XJCTask" name="xjc" xmlns:s="http://xml.netbeans.org/schema/JAXBWizConfig">
+            <classpath path="${jaxbwiz.xjcdef.classpath}"/>
+        </typedef>
+    </target>
+    <target name="jaxb-clean-code-generation" depends="clean,jaxb-code-generation"/>
+    <target name="jaxb-code-generation" depends="xjc-typedef-target,-do-init,-init-macrodef-javac">
+        <mkdir dir="${build.generated.sources.dir}/jaxb" xmlns:s="http://xml.netbeans.org/schema/JAXBWizConfig"/>
+        <mkdir dir="build/generated/jaxbCache" xmlns:s="http://xml.netbeans.org/schema/JAXBWizConfig"/>
+        <mkdir dir="build/generated/jaxbCache/Listcategory"/>
+        <xjc package="jaxb.listcategory" destdir="build/generated/jaxbCache/Listcategory" catalog="catalog.xml">
+            <classpath>
+                <pathelement location="${src.dir}"/>
+                <pathelement path="${jaxbwiz.xjcrun.classpath}"/>
+            </classpath>
+            <arg value="-xmlschema"/>
+            <schema file="src/conf/xml-resources/jaxb/Listcategory/ListProductSchema.xsd"/>
+            <depends file="src/conf/xml-resources/jaxb/Listcategory/ListProductSchema.xsd"/>
+            <produces dir="build/generated/jaxbCache/Listcategory"/>
+        </xjc>
+        <copy todir="${build.generated.sources.dir}/jaxb">
+            <fileset dir="build/generated/jaxbCache/Listcategory"/>
+        </copy>
+        <mkdir dir="build/generated/jaxbCache/listorders"/>
+        <xjc package="jaxb.listorders" destdir="build/generated/jaxbCache/listorders" catalog="catalog.xml">
+            <classpath>
+                <pathelement location="${src.dir}"/>
+                <pathelement path="${jaxbwiz.xjcrun.classpath}"/>
+            </classpath>
+            <arg value="-xmlschema"/>
+            <schema file="src/conf/xml-resources/jaxb/listorders/ListOrder.xsd"/>
+            <depends file="src/conf/xml-resources/jaxb/listorders/ListOrder.xsd"/>
+            <produces dir="build/generated/jaxbCache/listorders"/>
+        </xjc>
+        <copy todir="${build.generated.sources.dir}/jaxb">
+            <fileset dir="build/generated/jaxbCache/listorders"/>
+        </copy>
+        <mkdir dir="build/generated/jaxbCache/orders"/>
+        <xjc package="jaxb.orders" destdir="build/generated/jaxbCache/orders" catalog="catalog.xml">
+            <classpath>
+                <pathelement location="${src.dir}"/>
+                <pathelement path="${jaxbwiz.xjcrun.classpath}"/>
+            </classpath>
+            <arg value="-xmlschema"/>
+            <schema file="src/conf/xml-resources/jaxb/orders/ListOrderItemSchema.xsd"/>
+            <depends file="src/conf/xml-resources/jaxb/orders/ListOrderItemSchema.xsd"/>
+            <produces dir="build/generated/jaxbCache/orders"/>
+        </xjc>
+        <copy todir="${build.generated.sources.dir}/jaxb">
+            <fileset dir="build/generated/jaxbCache/orders"/>
+        </copy>
+        <mkdir dir="build/generated/jaxbCache/menu"/>
+        <xjc package="jaxb.menu" destdir="build/generated/jaxbCache/menu" catalog="catalog.xml">
+            <classpath>
+                <pathelement location="${src.dir}"/>
+                <pathelement path="${jaxbwiz.xjcrun.classpath}"/>
+            </classpath>
+            <arg value="-xmlschema"/>
+            <schema file="src/conf/xml-resources/jaxb/menu/menuSchema.xsd"/>
+            <depends file="src/conf/xml-resources/jaxb/menu/menuSchema.xsd"/>
+            <produces dir="build/generated/jaxbCache/menu"/>
+        </xjc>
+        <copy todir="${build.generated.sources.dir}/jaxb">
+            <fileset dir="build/generated/jaxbCache/menu"/>
+        </copy>
+        <mkdir dir="build/generated/jaxbCache/productsparsed"/>
+        <xjc package="jaxb.productsparsed" destdir="build/generated/jaxbCache/productsparsed" catalog="catalog.xml">
+            <classpath>
+                <pathelement location="${src.dir}"/>
+                <pathelement path="${jaxbwiz.xjcrun.classpath}"/>
+            </classpath>
+            <arg value="-xmlschema"/>
+            <schema file="src/conf/xml-resources/jaxb/productsparsed/listproductparse.xsd"/>
+            <depends file="src/conf/xml-resources/jaxb/productsparsed/listproductparse.xsd"/>
+            <produces dir="build/generated/jaxbCache/productsparsed"/>
+        </xjc>
+        <copy todir="${build.generated.sources.dir}/jaxb">
+            <fileset dir="build/generated/jaxbCache/productsparsed"/>
+        </copy>
+        <!--*** Web project javac macro does not support sourcepath attribute, so do not pass "sourcepath=${src.dir}"-->
+    </target>
+</project>
