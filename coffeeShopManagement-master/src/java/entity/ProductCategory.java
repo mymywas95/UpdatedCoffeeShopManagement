@@ -40,7 +40,7 @@ public class ProductCategory implements Serializable {
     @Basic(optional = false)
     @Column(name = "name", nullable = false, length = 100)
     private String name;
-    @Column(name = "description", length = 2147483647)
+    @Column(name = "description", length = 1073741823)
     private String description;
 
     public ProductCategory() {
@@ -103,5 +103,5 @@ public class ProductCategory implements Serializable {
     public String toString() {
         return "entity.ProductCategory[ id=" + id + " ]";
     }
-    
+
 }

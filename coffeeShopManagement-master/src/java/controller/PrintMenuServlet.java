@@ -63,41 +63,41 @@ public class PrintMenuServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         request.setCharacterEncoding("UTF-8");
         try {
-            PrintToPdfService printToPdfService = new PrintToPdfService();
+//            PrintToPdfService printToPdfService = new PrintToPdfService();
 //            String headername = request.getParameter("menu");
 //            JSONObject js = new JSONObject(headername);
 //            Boolean menuXMLFile = printToPdfService.createMenuXMLFile(js);
-            Boolean menuXMLFile = true;
-            if (menuXMLFile == true) {
-                String path = getServletContext().getRealPath("/");
-                String xslPath = path + "WEB-INF/menuFO.xsl";
-                String xmlPath = ManageConstantService.menuFile;
-                String foPath = path + "WEB-INF/menuFO.fo";
-                createFoFile(xslPath, xmlPath, foPath, path);
+//            Boolean menuXMLFile = true;
+//            if (menuXMLFile == true) {
+            String path = getServletContext().getRealPath("/");
+            String xslPath = path + "WEB-INF/menuFO.xsl";
+            String xmlPath = ManageConstantService.menuFile;
+            String foPath = path + "WEB-INF/menuFO.fo";
+            createFoFile(xslPath, xmlPath, foPath, path);
 
-                ByteArrayOutputStream out = new ByteArrayOutputStream();
+            ByteArrayOutputStream out = new ByteArrayOutputStream();
 
-                FopFactory fact = FopFactory.newInstance();
-                fact.setUserConfig(path + "/WEB-INF/config.xml");
-                FOUserAgent fua = fact.newFOUserAgent();
+            FopFactory fact = FopFactory.newInstance();
+            fact.setUserConfig(path + "/WEB-INF/config.xml");
+            FOUserAgent fua = fact.newFOUserAgent();
 
-                Fop fop = fact.newFop(org.apache.fop.apps.MimeConstants.MIME_PDF, fua, out);
+            Fop fop = fact.newFop(org.apache.fop.apps.MimeConstants.MIME_PDF, fua, out);
 
-                TransformerFactory trFact = TransformerFactory.newInstance();
-                Transformer trans = trFact.newTransformer();
+            TransformerFactory trFact = TransformerFactory.newInstance();
+            Transformer trans = trFact.newTransformer();
 
-                File fo = new File(foPath);
-                Source foSource = new StreamSource(fo);
-                Result saxResult = new SAXResult(fop.getDefaultHandler());
-                trans.transform(foSource, saxResult);
+            File fo = new File(foPath);
+            Source foSource = new StreamSource(fo);
+            Result saxResult = new SAXResult(fop.getDefaultHandler());
+            trans.transform(foSource, saxResult);
 
-                byte[] content = out.toByteArray();
-                response.setContentType("application/pdf");
-                response.setContentLength(content.length);
+            byte[] content = out.toByteArray();
+            response.setContentType("application/pdf");
+            response.setContentLength(content.length);
 
-                response.getOutputStream().write(content);
-                response.getOutputStream().flush();
-            }
+            response.getOutputStream().write(content);
+            response.getOutputStream().flush();
+//            }
 
         } catch (IOException ex) {
             Logger.getLogger(PrintToPdfService.class.getName()).log(Level.SEVERE, null, ex);

@@ -44,9 +44,10 @@
                         <div class="all-product-list-title-item">Danh sách sản phẩm</div>
                     </div>
                     <div class="all-product-list-action">
-                        <a class="btn btn-normal" onclick="saveToLocalStorage(menu)">Cập nhập menu</a>
+                        <a class="btn btn-normal" onclick="saveToLocalStorage()">Cập nhập menu</a>
                         <a class="btn" href="/coffeeShopManagement/">Quay lại</a>
-                        <a class="btn" href="/coffeeShopManagement/ParseDataFromCompetitorWeb">Cập nhập danh sách sản phẩm</a>
+                        <!--                        <a class="btn" href="/coffeeShopManagement/ParseDataFromCompetitorWeb">Cập nhập danh sách sản phẩm</a>-->
+                        <a class="btn" onclick="getProductCompetitor()">Cập nhập danh sách sản phẩm</a>
                     </div>
                 </div>
                 <div class="all-product-list-content">
@@ -74,7 +75,7 @@
                                                 <li>${products.name}</li>
                                                 <li onclick="removeItemToMenu(this, '${AllMenuItem.categoryName}', '${products.name}')"><input type="radio" name="'${products.id}'"></li>
                                                     <c:forEach var="productItem" items="${products.listProductItemDto}" >
-                                                    <li onclick="addItemToMenu(this, '${AllMenuItem.categoryName}', '${products.id}', '${products.name}', '${productItem.price}')">${productItem.price}<input type="radio" name="'${products.id}'"></li>
+                                                    <li onclick="addItemToMenu(this, '${AllMenuItem.categoryName}', '${products.id}', '${products.name}', '${productItem.price}')">${productItem.price}k<input type="radio" name="'${products.id}'"></li>
                                                     </c:forEach>
                                                 <li onclick="valuation(this, '${AllMenuItem.categoryName}', '${products.id}', '${products.name}')"><input type="radio" name="'${products.id}'"><input type="number" onclick="valuationProductPrice(this, '${AllMenuItem.categoryName}', '${products.id}', '${products.name}', '${productItem.price}')"></li>
                                             </ul>
@@ -87,7 +88,6 @@
                 </div>
             </div>
         </div>
-        <div id="menu"></div>
     </body>
 
 </html>

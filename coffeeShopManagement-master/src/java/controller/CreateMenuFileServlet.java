@@ -7,22 +7,20 @@ package controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.nio.charset.StandardCharsets;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import service.ManageConstantService;
-import service.ParseProductService;
+import org.json.JSONObject;
+import service.PrintToPdfService;
 
 /**
  *
  * @author MYNVTSE61526
  */
-@WebServlet(name = "ParseDataFromCompetitorWeb", urlPatterns = {"/ParseDataFromCompetitorWeb"})
-public class ParseDataFromCompetitorWeb extends HttpServlet {
+@WebServlet(name = "CreateMenuFileServlet", urlPatterns = {"/CreateMenuFileServlet"})
+public class CreateMenuFileServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,25 +34,26 @@ public class ParseDataFromCompetitorWeb extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        PrintWriter out = response.getWriter();
+        String message = "fail";
+        try {
 
-        try (PrintWriter out = response.getWriter()) {
-            String message = "fail";
-            String url = ManageConstantService.maintenancePage;
-            try {
-                ParseProductService parseProductService = new ParseProductService();
-                parseProductService.getCompetitorData();
+            PrintToPdfService printToPdfService = new PrintToPdfService();
+            String headername = request.getParameter("menu");
+            JSONObject js = new JSONObject(headername);
+            Boolean menuXMLFile = printToPdfService.createMenuXMLFile(js);
+            if (menuXMLFile == true) {
                 message = "success";
-            } catch (Exception e) {
-                message = "fail";
-                e.printStackTrace();
-            } finally {
-                out.write(message);            
-                out.close();
             }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            out.write(message);
         }
     }
 
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+// <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
      *

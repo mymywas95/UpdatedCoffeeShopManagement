@@ -5,4 +5,6 @@
     <system systemId="file:/E:/FPT/XML/project_xml/coffeeShopManagement/web/WEB-INF/ListOrderItemSchema.xsd" uri="src/conf/xml-resources/jaxb/orders/ListOrderItemSchema.xsd"/>
     <system systemId="file:/E:/FPT/XML/project_xml/coffeeShopManagement/web/WEB-INF/menuSchema.xsd" uri="src/conf/xml-resources/jaxb/menu/menuSchema.xsd"/>
     <system systemId="file:/E:/FPT/XML/project_xml/coffeeShopManagement/web/WEB-INF/listproductparse.xsd" uri="src/conf/xml-resources/jaxb/productsparsed/listproductparse.xsd"/>
+    <system systemId="file:/E:/FPT/XML/final_Project/coffeeShopManagement-master/web/WEB-INF/menuSchema.xsd" uri="src/conf/xml-resources/jaxb/menu/menuSchema.xsd"/>
+    <system systemId="file:/E:/FPT/XML/final_Project/coffeeShopManagement-master/web/WEB-INF/ListProductSchema.xsd" uri="src/conf/xml-resources/jaxb/Listcategory/ListProductSchema.xsd"/>
 </catalog>

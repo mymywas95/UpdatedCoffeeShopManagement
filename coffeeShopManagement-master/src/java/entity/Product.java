@@ -12,6 +12,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
@@ -30,7 +31,6 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Product.findByName", query = "SELECT p FROM Product p WHERE p.name = :name"),
     @NamedQuery(name = "Product.findByCategoryId", query = "SELECT p FROM Product p WHERE p.categoryId = :categoryId"),
     @NamedQuery(name = "Product.findByDescription", query = "SELECT p FROM Product p WHERE p.description = :description"),
-    @NamedQuery(name = "Product.findByImgLink", query = "SELECT p FROM Product p WHERE p.imgLink = :imgLink"),
     @NamedQuery(name = "Product.findByMaterial", query = "SELECT p FROM Product p WHERE p.material = :material")})
 public class Product implements Serializable {
 
@@ -46,11 +46,12 @@ public class Product implements Serializable {
     @Basic(optional = false)
     @Column(name = "categoryId", nullable = false)
     private int categoryId;
-    @Column(name = "description", length = 2147483647)
+    @Column(name = "description", length = 1073741823)
     private String description;
+    @Lob
     @Column(name = "imgLink", length = 2147483647)
     private String imgLink;
-    @Column(name = "material", length = 2147483647)
+    @Column(name = "material", length = 1073741823)
     private String material;
 
     public Product() {
@@ -138,5 +139,5 @@ public class Product implements Serializable {
     public String toString() {
         return "entity.Product[ id=" + id + " ]";
     }
-    
+
 }

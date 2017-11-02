@@ -35,7 +35,7 @@ and open the template in the editor.
     </xs:complexType>
     <xs:complexType name="ProductItem">
         <xs:sequence>
-            <xs:element name="price" type="xs:decimal"/>
+            <xs:element name="price" type="xs:integer"/>
             <xs:element name="competitorName" type="xs:string"/>
         </xs:sequence>
     </xs:complexType>

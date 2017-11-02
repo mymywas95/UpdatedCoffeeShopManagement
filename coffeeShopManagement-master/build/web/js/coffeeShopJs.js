@@ -465,15 +465,15 @@ function printMenu() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-//            if (this.responseText == "success") {
-//                console.log("success");
-//            } else {
-//                openModal("announceModal", "In menu thất bại");
-//            }
+            if (this.responseText == "success") {
+                window.open("/coffeeShopManagement/PrintMenuServlet", "_blank");
+            } else {
+                openModal("announceModal", "In menu thất bại");
+            }
 
         }
     };
-    xhttp.open("POST", "/coffeeShopManagement/PrintMenuServlet");
+    xhttp.open("POST", "/coffeeShopManagement/CreateMenuFileServlet");
     xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
     xhttp.send("menu=" + menuStored);
 }

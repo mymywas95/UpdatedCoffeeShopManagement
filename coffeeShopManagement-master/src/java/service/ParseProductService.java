@@ -92,7 +92,7 @@ public class ParseProductService implements Serializable {
             }
         }
         File f = new File(ManageConstantService.listProductMashalled);
-        if (f.exists() && f.isDirectory() && f.length() == 0) {
+        if (f.exists()) {
             f.delete();
         }
     }
@@ -141,6 +141,7 @@ public class ParseProductService implements Serializable {
         ProductDAO productDAO = new ProductDAO();
         CategoryDAO categoryDAO = new CategoryDAO();
         ProductItemDAO productItemDAO = new ProductItemDAO();
+        CompetitorDAO competitorDAO = new CompetitorDAO();
         String competitorName = competitorDTO.getName();
         String productName = "";
         String productPriceTemp = "";
@@ -181,7 +182,7 @@ public class ParseProductService implements Serializable {
             }
             ProductCategory productCategory = new ProductCategory();
             entity.Product product = new entity.Product();
-            ProductItem productItem = new ProductItem();
+
             checkExist = productDAO.checkExistProduct(productName);
             if (checkExist == 0) {
                 for (int j = 0; j < jSONCateArray.length(); j++) {
@@ -219,10 +220,19 @@ public class ParseProductService implements Serializable {
                         product.setName(productName);
                         int productId = productDAO.addNewProduct(product);
                         if (productId != 0) {
-                            productItem.setCompetitorId(competitorDTO.getId());
-                            productItem.setProductId(productId);
-                            productItem.setPrice(productPrice);
-                            productItemDAO.addNewProductItem(productItem);
+                            List<CompetitorDTO> listCompetitorDTO = competitorDAO.getAllCompetitor();
+                            for (CompetitorDTO competitorDTOItem : listCompetitorDTO) {
+                                ProductItem productItem = new ProductItem();
+                                if (competitorDTOItem.getId() == competitorDTO.getId()) {
+                                    productItem.setPrice(productPrice);
+                                } else {
+                                    productItem.setPrice(0);
+                                }
+                                productItem.setCompetitorId(competitorDTO.getId());
+                                productItem.setProductId(productId);
+                                productItemDAO.addNewProductItem(productItem);
+                            }
+
                         }
                     }
                 }

@@ -50,6 +50,7 @@ import org.xml.sax.SAXException;
  * @author MYNVTSE61526
  */
 public class PrintToPdfService implements Serializable {
+
     public boolean createMenuXMLFile(JSONObject jSONObject) {
         Menu menu = convertJsonToJaxb(jSONObject);
         try {
@@ -59,7 +60,12 @@ public class PrintToPdfService implements Serializable {
             marshallerObj.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
 //            QName qName = new QName("jaxb.menu", "menu");
 //            JAXBElement<Menu> root = new JAXBElement<>(qName, Menu.class, menu);
+//            File file = new File(ManageConstantService.menuFile);
+//            file.delete();
+//             file = null;
             marshallerObj.marshal(menu, new FileOutputStream(ManageConstantService.menuFile));
+//            file = new File(ManageConstantService.menuFile + ".new");
+//            file.renameTo(new File(ManageConstantService.menuFile));
             return true;
         } catch (Exception e) {
             e.printStackTrace();
@@ -84,7 +90,7 @@ public class PrintToPdfService implements Serializable {
                 Product product = new Product();
                 product.setId(new BigInteger(productId));
                 product.setName(productName);
-                product.setPrice(new BigDecimal(productPrice));
+                product.setPrice(new BigInteger(productPrice));
                 category.getProduct().add(product);
             }
             menu.getCategory().add(category);

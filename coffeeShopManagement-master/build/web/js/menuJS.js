@@ -1,11 +1,11 @@
 var s = {
     "menu": []
 };
-function saveToLocalStorage(selectedMenuContentId) {
+function saveToLocalStorage() {
     localStorage.setItem("myMenu", JSON.stringify(s));
     var menuStored = localStorage.getItem("myMenu");
     if (typeof (menuStored) == "undefined" || menuStored == null) {
-        console.log("fail");
+       openModal("announceModal", "Cập nhập menu thất bại");
     } else {
         window.location.replace("http://localhost:8084/coffeeShopManagement/");
     }
@@ -45,7 +45,6 @@ function addItemToMenu(checkbox, categoryName, id, name, price) {
             addProductToMenu(id, name, price, s.menu[s.menu.length - 1].productList);
         }
     }
-    document.getElementById("menu").innerHTML = JSON.stringify(s);
 }
 function valuation(checkbox, categoryName, id, name) {
     checkbox.querySelector("input").checked = true;
@@ -57,10 +56,10 @@ function valuation(checkbox, categoryName, id, name) {
 function valuationProductPrice(input, categoryName, id, name, price) {
     input.addEventListener("keyup", function (evt) {
         if (input.value <= 0) {
-             openModal("announceModal", "Giá của sản phẩm phải lớn hơn 1k");
-                setTimeout(function () {
-                    openModal("announceModal", "");
-                }, 1600);
+            openModal("announceModal", "Giá của sản phẩm phải lớn hơn 1k");
+            setTimeout(function () {
+                openModal("announceModal", "");
+            }, 1600);
         } else {
             addItemToMenu(input, categoryName, id, name, input.value)
         }
@@ -77,8 +76,8 @@ function removeItemToMenu(checkbox, categoryName, name) {
                     for (var j = 0; j < s.menu[i].productList.length; j++) {
                         if (name == s.menu[i].productList[j].name) {
                             s.menu[i].productList.splice(j, 1);
-                            if(s.menu[i].productList.length == 0){
-                                s.menu.splice(i,1);
+                            if (s.menu[i].productList.length == 0) {
+                                s.menu.splice(i, 1);
                             }
                             break;
                         }
@@ -88,7 +87,6 @@ function removeItemToMenu(checkbox, categoryName, name) {
             }
         }
     }
-    document.getElementById("menu").innerHTML = JSON.stringify(s);
 }
 function addCateToMenu(CateTitle, arr) {
     arr.push({
@@ -102,4 +100,26 @@ function addProductToMenu(id, name, price, arr) {
         "name": name,
         "price": price
     })
+}
+function getProductCompetitor() {
+    var el = document.getElementById("announceModal");
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            openModal("announceModal", "");
+            if (this.responseText == "success") {
+                window.location.replace("http://localhost:8084/coffeeShopManagement/GetMenuServlet");
+            } else {
+                openModal("announceModal", "Cập nhập thất bại");
+            }
+        } else {
+            if (!hasClass(el, 'show')) {
+                openModal("announceModal", "Việc cập nhập thông tin sản phẩm sẽ mất nhiều thời gian, vui lòng đợi trong giây lát");
+            }
+        }
+    };
+    xhttp.open("POST", "/coffeeShopManagement/ParseDataFromCompetitorWeb");
+    xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
+    xhttp.send();
 }

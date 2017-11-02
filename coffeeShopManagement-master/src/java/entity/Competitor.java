@@ -42,7 +42,7 @@ public class Competitor implements Serializable {
     private String name;
     @Column(name = "websiteAddress", length = 100)
     private String websiteAddress;
-    @Column(name = "description", length = 2147483647)
+    @Column(name = "description", length = 1073741823)
     private String description;
 
     public Competitor() {
@@ -108,5 +108,5 @@ public class Competitor implements Serializable {
     public String toString() {
         return "entity.Competitor[ id=" + id + " ]";
     }
-    
+
 }

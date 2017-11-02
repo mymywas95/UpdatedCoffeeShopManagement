@@ -27,7 +27,7 @@ and open the template in the editor.
         <xs:sequence>
             <xs:element name="id" type="xs:integer"/>
             <xs:element name="name" type="xs:string"/>
-            <xs:element name="price" type="xs:decimal"/>
+            <xs:element name="price" type="xs:integer"/>
         </xs:sequence> 
     </xs:complexType>
 </xs:schema>

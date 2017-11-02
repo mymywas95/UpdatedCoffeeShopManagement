@@ -35,7 +35,7 @@ public class ProductItemDAO implements Serializable {
         List<ProductItemDTO> result = new ArrayList<ProductItemDTO>();
         for (Object[] pi : resEnt) {
             ProductItemDTO productItemDTO = new ProductItemDTO();
-            productItemDTO.setPrice(new Double(pi[0].toString()));
+            productItemDTO.setPrice(new Integer(pi[0].toString()));
             productItemDTO.setCompetitorName(pi[1].toString());
             result.add(productItemDTO);
         }

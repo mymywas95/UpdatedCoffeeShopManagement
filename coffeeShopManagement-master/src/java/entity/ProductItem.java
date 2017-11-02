@@ -47,8 +47,8 @@ public class ProductItem implements Serializable {
     private int competitorId;
     @Basic(optional = false)
     @Column(name = "price", nullable = false)
-    private double price;
-    @Column(name = "description", length = 2147483647)
+    private int price;
+    @Column(name = "description", length = 1073741823)
     private String description;
 
     public ProductItem() {
@@ -58,7 +58,7 @@ public class ProductItem implements Serializable {
         this.id = id;
     }
 
-    public ProductItem(Integer id, int productId, int competitorId, double price) {
+    public ProductItem(Integer id, int productId, int competitorId, int price) {
         this.id = id;
         this.productId = productId;
         this.competitorId = competitorId;
@@ -89,11 +89,11 @@ public class ProductItem implements Serializable {
         this.competitorId = competitorId;
     }
 
-    public double getPrice() {
+    public int getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 
@@ -129,5 +129,5 @@ public class ProductItem implements Serializable {
     public String toString() {
         return "entity.ProductItem[ id=" + id + " ]";
     }
-    
+
 }

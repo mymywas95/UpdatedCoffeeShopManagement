@@ -11,10 +11,7 @@ package DTO;
  */
 public class ProductItemDTO {
     private String competitorName;
-    private Double price;
-
-    public ProductItemDTO() {
-    }
+    private int price;
 
     public String getCompetitorName() {
         return competitorName;
@@ -24,12 +21,13 @@ public class ProductItemDTO {
         this.competitorName = competitorName;
     }
 
-    public Double getPrice() {
+    public int getPrice() {
         return price;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(int price) {
         this.price = price;
     }
+
     
 }

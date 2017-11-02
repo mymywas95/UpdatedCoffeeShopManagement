@@ -114,7 +114,7 @@ public class MenuService implements Serializable {
                     for (ProductItem productItem : product.getProductItem()) {
                         ProductItemDTO productItemDTO = new ProductItemDTO();
                         productItemDTO.setCompetitorName(productItem.getCompetitorName());
-                        productItemDTO.setPrice(Double.parseDouble(productItem.getPrice() + ""));
+                        productItemDTO.setPrice(Integer.parseInt(productItem.getPrice() + ""));
                         listproductItemDTO.add(productItemDTO);
                     }
                     productDTO.setListProductItemDto(listproductItemDTO);
@@ -146,7 +146,7 @@ public class MenuService implements Serializable {
                 for (ProductItemDTO productItemDTO : productDTO.getListProductItemDto()) {
                     ProductItem productItem = new ProductItem();
                     productItem.setCompetitorName(productItemDTO.getCompetitorName());
-                    productItem.setPrice(new BigDecimal(productItemDTO.getPrice() + ""));
+                    productItem.setPrice(new BigInteger(productItemDTO.getPrice() + ""));
                     product.getProductItem().add(productItem);
                 }
                 category.getProduct().add(product);
