@@ -43,10 +43,10 @@ public class MenuService implements Serializable {
     private ProductDAO productDAO;
     private ProductItemDAO productItemDAO;
 
-    public List<MenuDTO> getAllMenuItem() {
+    public List<MenuDTO> getAllMenuItem(String path) {
         
         List<MenuDTO> listMenu = new ArrayList<MenuDTO>();
-        File f = new File(ManageConstantService.listProductMashalled);
+        File f = new File(path + ManageConstantService.listProductMashalled);
         if (!f.exists() && !f.isDirectory() && f.length() == 0) {
             categoryDAO = new CategoryDAO();
             productDAO = new ProductDAO();
@@ -64,12 +64,12 @@ public class MenuService implements Serializable {
                 menuDTO.setCategoryId(categoryDTO.getId());
                 listMenu.add(menuDTO);
             }
-            boolean smarshalled = marshalMenuToXMl(listMenu, ManageConstantService.listProductMashalled);
+            boolean smarshalled = marshalMenuToXMl(listMenu, path +  ManageConstantService.listProductMashalled);
             if (smarshalled == false) {
                 return null;
             }
         }
-        List<MenuDTO> listmDTO = UnMarshalXMLToMenu(ManageConstantService.listProductMashalled);
+        List<MenuDTO> listmDTO = UnMarshalXMLToMenu(path + ManageConstantService.listProductMashalled);
         if (listmDTO.size() > 0) {
             return listmDTO;
         } else {

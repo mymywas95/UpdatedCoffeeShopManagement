@@ -51,7 +51,7 @@ import org.xml.sax.SAXException;
  */
 public class PrintToPdfService implements Serializable {
 
-    public boolean createMenuXMLFile(JSONObject jSONObject) {
+    public boolean createMenuXMLFile(JSONObject jSONObject, String path) {
         Menu menu = convertJsonToJaxb(jSONObject);
         try {
             JAXBContext contextObj = JAXBContext.newInstance(Menu.class);
@@ -63,7 +63,7 @@ public class PrintToPdfService implements Serializable {
 //            File file = new File(ManageConstantService.menuFile);
 //            file.delete();
 //             file = null;
-            marshallerObj.marshal(menu, new FileOutputStream(ManageConstantService.menuFile));
+            marshallerObj.marshal(menu, new FileOutputStream(path + ManageConstantService.menuFile));
 //            file = new File(ManageConstantService.menuFile + ".new");
 //            file.renameTo(new File(ManageConstantService.menuFile));
             return true;

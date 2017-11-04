@@ -75,7 +75,6 @@ function openMenuModal(id, tableId) {
     }
 }
 function ChangeTableItem(id, name, price, quantity, btn) {
-    debugger;
     var orderBlock = document.getElementsByClassName("order-block")[0];
     var tableId = document.getElementById("tableId").value;
 
@@ -311,7 +310,13 @@ function setOrderContent(orderContent, link) {
             lastChild.appendChild(btnAdd);
             lastChild.appendChild(btnMinus)
             var productItemBlock = document.createElement("ul");
-            productItemBlock.appendChild(document.createElement("li")).appendChild(document.createTextNode(productName));
+            var productNameItemBlock = document.createElement("li");
+            var deleteSelectedItem = document.createElement("i");
+            deleteSelectedItem.setAttribute("onclick", "ChangeTableItem(" + productId + ",'" + productName + "'," + (-(productPrice * productQuabtity)) + "," + (-productQuabtity) + ", this)");
+            deleteSelectedItem.className += "fa fa-times-circle";
+            productNameItemBlock.appendChild(deleteSelectedItem);
+            productNameItemBlock.appendChild(document.createTextNode(productName))
+            productItemBlock.appendChild(productNameItemBlock);
             productItemBlock.appendChild(document.createElement("li")).appendChild(document.createTextNode(productQuabtity));
             productItemBlock.appendChild(document.createElement("li")).appendChild(document.createTextNode(productPrice + "k"));
             productItemBlock.appendChild(document.createElement("li")).appendChild(lastChild);
@@ -333,16 +338,14 @@ function setOrderContent(orderContent, link) {
     btnSaveOrder.appendChild(document.createTextNode("Xác nhận"));
 
     document.getElementsByClassName("order-block")[0].appendChild(orderBlock);
-    if (link == 1) {
-        var btnPayOrder = document.createElement("a");
-        btnPayOrder.className += "btn btn-normal btn-pay-order";
-        btnPayOrder.setAttribute("onclick", "solveOrder('" + orderContent.tableId + "')");
-        btnPayOrder.appendChild(document.createTextNode("Thanh toán"));
-//        orderSaveBlock.appendChild(btnPayOrder);
-    }
+    var btnCancelOrder = document.createElement("a");
+    btnCancelOrder.className += "btn btn-danger btn-cancel-order";
+    btnCancelOrder.setAttribute("onclick", "cancelOrder('" + orderContent.tableId + "')");
+    btnCancelOrder.appendChild(document.createTextNode("Hủy order"));
+    orderSaveBlock.appendChild(btnCancelOrder);
     orderSaveBlock.appendChild(btnSaveOrder);
     if (orderContent.productList.length > 0) {
-//        document.getElementsByClassName("order-block")[0].appendChild(orderToalBlock);
+        document.getElementsByClassName("order-block")[0].appendChild(orderToalBlock);
         document.getElementsByClassName("order-block")[0].appendChild(orderSaveBlock);
     }
 
@@ -392,55 +395,30 @@ function saveOrderToLocalStorage() {
     }
 
 }
-function solveOrder(tableId) {
+function cancelOrder(tableId) {
     var orderStored = localStorage.getItem("order");
     var orderStoredParsed = JSON.parse(orderStored);
-    var tableInformation;
     for (var i = 0; i < orderStoredParsed.order.length; i++) {
         if (orderStoredParsed.order[i].tableId == tableId) {
-            tableInformation = orderStoredParsed.order[i];
-//           orderStoredParsed.order[i].tableStatus = "Đã Thanh toán";
-//           orderStoredParsed.order[i].tableTotal = "0";
-//           orderStoredParsed.order[i].productList = [];
-
+            orderStoredParsed.order[i].tableStatus = "Đã Thanh toán";
+            orderStoredParsed.order[i].tableTotal = 0;
+            orderStoredParsed.order[i].productList = [];
+            localStorage.setItem("order", JSON.stringify(orderStoredParsed));
+            setOrderContent(orderStoredParsed.order[i], 1);
+            var el = document.getElementById("MenuModal");
+            if (hasClass(el, 'show')) {
+                removeClass(el, 'show');
+            }
             break;
         }
     }
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            if (this.responseText == "success") {
-                for (var i = 0; i < orderStoredParsed.order.length; i++) {
-                    if (orderStoredParsed.order[i].tableId == tableInformation.tableId) {
-                        orderStoredParsed.order[i].tableStatus = "Đã Thanh toán";
-                        orderStoredParsed.order[i].tableTotal = 0;
-                        orderStoredParsed.order[i].productList = [];
-                        localStorage.setItem("order", JSON.stringify(orderStoredParsed));
-                        setOrderContent(orderStoredParsed.order[i], 1);
-                        var el = document.getElementById("MenuModal");
-                        if (hasClass(el, 'show')) {
-                            removeClass(el, 'show');
-                        }
-                        break;
-                    }
-                }
-                var myNodePay = document.getElementsByClassName("table-management-item");
-                if (typeof (myNodePay[0]) !== "undefined") {
-                    while (myNodePay[0]) {
-                        myNodePay[0].parentNode.removeChild(myNodePay[0]);
-                    }
-                }
-                setTableList();
-            } else {
-                openModal("announceModal", "Thanh toán thất bại");
-            }
-
+    var myNodePay = document.getElementsByClassName("table-management-item");
+    if (typeof (myNodePay[0]) !== "undefined") {
+        while (myNodePay[0]) {
+            myNodePay[0].parentNode.removeChild(myNodePay[0]);
         }
-    };
-    xhttp.open("POST", "/coffeeShopManagement/SolveOrderServlet");
-    xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
-    xhttp.send("order=" + JSON.stringify(tableInformation));
-
+    }
+    setTableList();
 }
 function addNewTable() {
     var orderStored = localStorage.getItem("order");

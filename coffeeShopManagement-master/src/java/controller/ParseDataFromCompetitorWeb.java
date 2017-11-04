@@ -38,17 +38,23 @@ public class ParseDataFromCompetitorWeb extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
 
         try (PrintWriter out = response.getWriter()) {
+            String path = getServletContext().getRealPath("/");
             String message = "fail";
-            String url = ManageConstantService.maintenancePage;
+            String url = ManageConstantService.getMenuServlet;
             try {
                 ParseProductService parseProductService = new ParseProductService();
-                parseProductService.getCompetitorData();
+                parseProductService.getCompetitorData(path);
                 message = "success";
+
             } catch (Exception e) {
                 message = "fail";
                 e.printStackTrace();
             } finally {
-                out.write(message);            
+                if (message.equals("success")) {
+                    RequestDispatcher rd = request.getRequestDispatcher(url);
+                    rd.forward(request, response);
+                }
+                out.write(message);
                 out.close();
             }
         }

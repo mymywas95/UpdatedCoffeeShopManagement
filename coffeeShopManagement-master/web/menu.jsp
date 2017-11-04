@@ -44,8 +44,8 @@
                         <div class="all-product-list-title-item">Danh sách sản phẩm</div>
                     </div>
                     <div class="all-product-list-action">
+                          <a class="btn" href="/coffeeShopManagement/">Quay lại</a>
                         <a class="btn btn-normal" onclick="saveToLocalStorage()">Cập nhập menu</a>
-                        <a class="btn" href="/coffeeShopManagement/">Quay lại</a>
                         <!--                        <a class="btn" href="/coffeeShopManagement/ParseDataFromCompetitorWeb">Cập nhập danh sách sản phẩm</a>-->
                         <a class="btn" onclick="getProductCompetitor()">Cập nhập danh sách sản phẩm</a>
                     </div>

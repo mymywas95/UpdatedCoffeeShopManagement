@@ -1,86 +1,1142 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ns2:listCategory xmlns="http://www.coffeeShop.com.vn" xmlns:ns2="jaxb.listcategory">
     <category>
-        <id>1</id>
-        <name>Cà phê</name>
+        <id>2</id>
+        <name>TRÀ SỮA</name>
         <product>
             <id>1</id>
-            <name>Cà phê đen đá</name>
+            <name>TRÀ SỮA THẠCH THỦY TINH (YOGUST)</name>
             <productItem>
-                <price>12.0</price>
+                <price>24</price>
                 <competitorName>Dù Vàng</competitorName>
             </productItem>
             <productItem>
-                <price>14.0</price>
+                <price>0</price>
                 <competitorName>Uni Space</competitorName>
             </productItem>
         </product>
         <product>
-            <id>2</id>
-            <name>Cà phê đen nóng</name>
+            <id>35</id>
+            <name>TRÀ SỮA THẠCH TRÁI CÂY</name>
             <productItem>
-                <price>16.0</price>
+                <price>24</price>
                 <competitorName>Dù Vàng</competitorName>
             </productItem>
             <productItem>
-                <price>18.0</price>
-                <competitorName>Uni Space</competitorName>
-            </productItem>
-        </product>
-    </category>
-    <category>
-        <id>2</id>
-        <name>Trà</name>
-        <product>
-            <id>3</id>
-            <name>Trà đào</name>
-            <productItem>
-                <price>20.0</price>
-                <competitorName>Dù Vàng</competitorName>
-            </productItem>
-            <productItem>
-                <price>22.0</price>
+                <price>0</price>
                 <competitorName>Uni Space</competitorName>
             </productItem>
         </product>
         <product>
-            <id>4</id>
-            <name>Trà xoài</name>
+            <id>36</id>
+            <name>TRÀ SỮA THÁI XANH</name>
             <productItem>
-                <price>20.0</price>
+                <price>24</price>
                 <competitorName>Dù Vàng</competitorName>
             </productItem>
             <productItem>
-                <price>22.0</price>
+                <price>0</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>37</id>
+            <name>TRÀ SỮA THÁI ĐỎ</name>
+            <productItem>
+                <price>24</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>0</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>38</id>
+            <name>TRÀ SỮA BẠC HÀ</name>
+            <productItem>
+                <price>24</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>0</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>39</id>
+            <name>TRÀ SỮA ĐÀO</name>
+            <productItem>
+                <price>32</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>0</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>43</id>
+            <name>TRÀ SỮA BÁNH FLAN</name>
+            <productItem>
+                <price>32</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>0</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>70</id>
+            <name>TRÀ SỮA DÂU SIZE S</name>
+            <productItem>
+                <price>0</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>24</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>71</id>
+            <name>TRÀ SỮA SOCOLA SIZE S</name>
+            <productItem>
+                <price>0</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>24</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>72</id>
+            <name>TRÀ SỮA OLONG SIZE S</name>
+            <productItem>
+                <price>0</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>26</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>73</id>
+            <name>TRÀ SỮA MILKFOAM SIZE S</name>
+            <productItem>
+                <price>0</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>32</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>74</id>
+            <name>TRÀ SỮA TRUYỀN THỐNG SIZE S</name>
+            <productItem>
+                <price>0</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>22</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>75</id>
+            <name>TRÀ SỮA CARAMEL SIZE S</name>
+            <productItem>
+                <price>0</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>24</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>76</id>
+            <name>MACCHIATO MILKFOAM SIZE S</name>
+            <productItem>
+                <price>0</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>32</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>77</id>
+            <name>TRÀ SỮA OLONG MILKFOAM SIZE S</name>
+            <productItem>
+                <price>0</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>34</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>78</id>
+            <name>TRÀ SỮA ĐÀO SIZE S</name>
+            <productItem>
+                <price>0</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>24</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>79</id>
+            <name>TRÀ SỮA TÁO XANH SIZE S</name>
+            <productItem>
+                <price>0</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>24</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>80</id>
+            <name>TRÀ SỮA TÁO XANH SIZE M</name>
+            <productItem>
+                <price>0</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>29</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>81</id>
+            <name>TRÀ SỮA ĐÀO SIZE M</name>
+            <productItem>
+                <price>0</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>29</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>82</id>
+            <name>TRÀ SỮA CARAMEL SIZE M</name>
+            <productItem>
+                <price>0</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>29</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>83</id>
+            <name>TRÀ SỮA SOCOLA SIZE M</name>
+            <productItem>
+                <price>0</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>29</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>84</id>
+            <name>TRÀ SỮA DÂU SIZE M</name>
+            <productItem>
+                <price>0</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>29</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>85</id>
+            <name>TRÀ SỮA TRUYỀN THỐNG SIZE M</name>
+            <productItem>
+                <price>0</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>27</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>86</id>
+            <name>TRÀ SỮA OLONG SIZE M</name>
+            <productItem>
+                <price>0</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>31</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>87</id>
+            <name>TRÀ SỮA OLONG MILKFOAM SIZE M</name>
+            <productItem>
+                <price>0</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>39</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>88</id>
+            <name>TRÀ SỮA MILKFOAM SIZE M</name>
+            <productItem>
+                <price>0</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>37</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>89</id>
+            <name>MACCHIATO MILKFOAM SIZE M</name>
+            <productItem>
+                <price>0</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>37</price>
                 <competitorName>Uni Space</competitorName>
             </productItem>
         </product>
     </category>
     <category>
         <id>3</id>
-        <name>Yogust</name>
+        <name>CÀ PHÊ</name>
         <product>
-            <id>5</id>
-            <name>Yogust đào</name>
+            <id>2</id>
+            <name>CÀ PHÊ ĐEN</name>
             <productItem>
-                <price>20.0</price>
+                <price>15</price>
                 <competitorName>Dù Vàng</competitorName>
             </productItem>
             <productItem>
-                <price>22.0</price>
+                <price>0</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>3</id>
+            <name>CÀ PHÊ SỮA</name>
+            <productItem>
+                <price>18</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>0</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>44</id>
+            <name>ICE ESPRESSO</name>
+            <productItem>
+                <price>0</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>22</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>45</id>
+            <name>VIETNAMESE ESPRESSO</name>
+            <productItem>
+                <price>0</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>25</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>46</id>
+            <name>CAPPUCCINO</name>
+            <productItem>
+                <price>0</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>30</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>47</id>
+            <name>HOT LATTE</name>
+            <productItem>
+                <price>0</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>28</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>48</id>
+            <name>FRAPPUCHINO</name>
+            <productItem>
+                <price>0</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>32</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>49</id>
+            <name>ICE LATTE</name>
+            <productItem>
+                <price>0</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>30</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>50</id>
+            <name>MANGO CHILLER</name>
+            <productItem>
+                <price>0</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>36</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>51</id>
+            <name>BLUEBERRY CHILLER</name>
+            <productItem>
+                <price>0</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>37</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>52</id>
+            <name>BLACKCURRANT CHILLER</name>
+            <productItem>
+                <price>0</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>36</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>90</id>
+            <name>ICE VN COFFEE WITH MILK</name>
+            <productItem>
+                <price>0</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>22</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>91</id>
+            <name>NƯỚC CAM BT</name>
+            <productItem>
+                <price>0</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>15</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>92</id>
+            <name>ICE VN COFFEE</name>
+            <productItem>
+                <price>0</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>20</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+    </category>
+    <category>
+        <id>4</id>
+        <name>TRÀ</name>
+        <product>
+            <id>4</id>
+            <name>HỒNG TRÀ</name>
+            <productItem>
+                <price>19</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>0</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>5</id>
+            <name>TRÀ CHANH</name>
+            <productItem>
+                <price>19</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>0</price>
                 <competitorName>Uni Space</competitorName>
             </productItem>
         </product>
         <product>
             <id>6</id>
-            <name>Yogust xoài</name>
+            <name>TRÀ LIPTON</name>
             <productItem>
-                <price>20.0</price>
-                <competitorName>Uni Space</competitorName>
+                <price>19</price>
+                <competitorName>Dù Vàng</competitorName>
             </productItem>
             <productItem>
-                <price>22.0</price>
+                <price>0</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>7</id>
+            <name>TRÀ VẢI</name>
+            <productItem>
+                <price>29</price>
                 <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>0</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>8</id>
+            <name>TRÀ ĐÀO</name>
+            <productItem>
+                <price>29</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>0</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>41</id>
+            <name>HỒNG TRÀ MACHIATO</name>
+            <productItem>
+                <price>34</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>0</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>58</id>
+            <name>PEACH TEA</name>
+            <productItem>
+                <price>0</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>32</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>59</id>
+            <name>HOT LIPTON</name>
+            <productItem>
+                <price>0</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>20</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>60</id>
+            <name>MINT TEA</name>
+            <productItem>
+                <price>0</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>20</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>61</id>
+            <name>GINGER TEA</name>
+            <productItem>
+                <price>0</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>20</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>62</id>
+            <name>SỮA ĐẶC</name>
+            <productItem>
+                <price>0</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>3</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>63</id>
+            <name>ICE LIPTON</name>
+            <productItem>
+                <price>0</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>15</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+    </category>
+    <category>
+        <id>5</id>
+        <name>SODA</name>
+        <product>
+            <id>9</id>
+            <name>MARSHALL ERIKSEN</name>
+            <productItem>
+                <price>29</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>0</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>10</id>
+            <name>ROBIN SCHERBATSKY</name>
+            <productItem>
+                <price>29</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>0</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>11</id>
+            <name>BARNEY STINSON</name>
+            <productItem>
+                <price>29</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>0</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>12</id>
+            <name>TED MOSBY</name>
+            <productItem>
+                <price>29</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>0</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>13</id>
+            <name>RANJIT SINGH</name>
+            <productItem>
+                <price>29</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>0</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>14</id>
+            <name>LILY ALDRIN</name>
+            <productItem>
+                <price>29</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>0</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>15</id>
+            <name>ZOEY PIERSON</name>
+            <productItem>
+                <price>29</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>0</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>16</id>
+            <name>TRACY MCCONNELL</name>
+            <productItem>
+                <price>29</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>0</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>64</id>
+            <name>SODA VIỆT QUẤT</name>
+            <productItem>
+                <price>0</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>29</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>65</id>
+            <name>SODA NHO ĐEN</name>
+            <productItem>
+                <price>0</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>28</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>66</id>
+            <name>SODA ĐÀO</name>
+            <productItem>
+                <price>0</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>27</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>67</id>
+            <name>SODA CHANH DÂY</name>
+            <productItem>
+                <price>0</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>29</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>68</id>
+            <name>SODA PHÚC BỒN TỬ</name>
+            <productItem>
+                <price>0</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>28</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>69</id>
+            <name>SODA DÂU</name>
+            <productItem>
+                <price>0</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>26</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+    </category>
+    <category>
+        <id>6</id>
+        <name>SỮA CHUA LẮC</name>
+        <product>
+            <id>17</id>
+            <name>SCL CHANH DÂY</name>
+            <productItem>
+                <price>29</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>0</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>18</id>
+            <name>SCL NHO ĐEN</name>
+            <productItem>
+                <price>29</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>0</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>19</id>
+            <name>SCL VIỆT QUẤT</name>
+            <productItem>
+                <price>29</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>0</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>20</id>
+            <name>SCL DÂU</name>
+            <productItem>
+                <price>29</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>0</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>21</id>
+            <name>SCL PHÚC BỒN TỬ</name>
+            <productItem>
+                <price>29</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>0</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>22</id>
+            <name>SCL XOÀI</name>
+            <productItem>
+                <price>29</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>0</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+    </category>
+    <category>
+        <id>7</id>
+        <name>SỮA LẮC</name>
+        <product>
+            <id>23</id>
+            <name>MATCHA MS</name>
+            <productItem>
+                <price>29</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>0</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>24</id>
+            <name>CHOCOLATE MS</name>
+            <productItem>
+                <price>29</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>0</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+    </category>
+    <category>
+        <id>8</id>
+        <name>ĐÁ XAY</name>
+        <product>
+            <id>25</id>
+            <name>MATCHA ĐX</name>
+            <productItem>
+                <price>34</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>0</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>26</id>
+            <name>SÔ-CÔ-LA ĐX</name>
+            <productItem>
+                <price>34</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>0</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>27</id>
+            <name>COOKIE ĐX</name>
+            <productItem>
+                <price>34</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>0</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>28</id>
+            <name>MOCHA ĐX</name>
+            <productItem>
+                <price>34</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>0</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>29</id>
+            <name>CÀ PHÊ ĐÁ XAY</name>
+            <productItem>
+                <price>34</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>0</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>30</id>
+            <name>CHANH DÂY ĐX</name>
+            <productItem>
+                <price>34</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>0</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>31</id>
+            <name>NHO ĐEN ĐX</name>
+            <productItem>
+                <price>34</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>0</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>32</id>
+            <name>XOÀI ĐX</name>
+            <productItem>
+                <price>34</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>0</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>33</id>
+            <name>DÂU ĐX</name>
+            <productItem>
+                <price>34</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>0</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>34</id>
+            <name>PHÚC BỒN TỬ ĐX</name>
+            <productItem>
+                <price>34</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>0</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>42</id>
+            <name>VIỆT QUỐC ĐX</name>
+            <productItem>
+                <price>34</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>0</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+    </category>
+    <category>
+        <id>9</id>
+        <name>PHỤ PHÍ</name>
+        <product>
+            <id>40</id>
+            <name>PHỤ PHÍ</name>
+            <productItem>
+                <price>1</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>0</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+    </category>
+    <category>
+        <id>10</id>
+        <name>ĐẶC BIỆT</name>
+        <product>
+            <id>53</id>
+            <name>LEMON SNOW</name>
+            <productItem>
+                <price>0</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>29</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>54</id>
+            <name>UNICHOCO</name>
+            <productItem>
+                <price>0</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>38</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>55</id>
+            <name>COOKIES`N CREAM</name>
+            <productItem>
+                <price>0</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>36</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>56</id>
+            <name>UNICHIO</name>
+            <productItem>
+                <price>0</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>35</price>
+                <competitorName>Uni Space</competitorName>
+            </productItem>
+        </product>
+        <product>
+            <id>57</id>
+            <name>MATCHA GREEN TEA</name>
+            <productItem>
+                <price>0</price>
+                <competitorName>Dù Vàng</competitorName>
+            </productItem>
+            <productItem>
+                <price>42</price>
+                <competitorName>Uni Space</competitorName>
             </productItem>
         </product>
     </category>

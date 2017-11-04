@@ -37,7 +37,8 @@ public class IndexServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             IndexService indexService = new IndexService();
-            int checkdResult = indexService.checkDataBeforeLoad();
+            String path = getServletContext().getRealPath("/");
+            int checkdResult = indexService.checkDataBeforeLoad(path);
             String url = "";
 
             if (checkdResult == 0) {

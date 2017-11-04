@@ -70,15 +70,15 @@ public class PrintMenuServlet extends HttpServlet {
 //            Boolean menuXMLFile = true;
 //            if (menuXMLFile == true) {
             String path = getServletContext().getRealPath("/");
-            String xslPath = path + "WEB-INF/menuFO.xsl";
-            String xmlPath = ManageConstantService.menuFile;
-            String foPath = path + "WEB-INF/menuFO.fo";
+            String xslPath = path + ManageConstantService.menuFOXsl;
+            String xmlPath =path +  ManageConstantService.menuFile;
+            String foPath = path + ManageConstantService.menuFO;
             createFoFile(xslPath, xmlPath, foPath, path);
 
             ByteArrayOutputStream out = new ByteArrayOutputStream();
 
             FopFactory fact = FopFactory.newInstance();
-            fact.setUserConfig(path + "/WEB-INF/config.xml");
+            fact.setUserConfig(path + ManageConstantService.configFile);
             FOUserAgent fua = fact.newFOUserAgent();
 
             Fop fop = fact.newFop(org.apache.fop.apps.MimeConstants.MIME_PDF, fua, out);

@@ -67,7 +67,7 @@ public class OrderService implements Serializable {
     private BillDAO billDAO;
     private BillItemDAO billItemDAO;
 
-    public Boolean createNewBill(OrderDTO orderDTO) {
+    public Boolean createNewBill(OrderDTO orderDTO, String path) {
         billDAO = new BillDAO();
         billItemDAO = new BillItemDAO();
         Bill bill = convertBillDTOToEntity(orderDTO);
@@ -83,7 +83,7 @@ public class OrderService implements Serializable {
                 }
             }
         } else {
-            return insertOrderItemNodebyStax(orderDTO);
+            return insertOrderItemNodebyStax(orderDTO, path);
         }
         return true;
     }
@@ -143,13 +143,13 @@ public class OrderService implements Serializable {
         return orderDTO;
     }
 
-    public Boolean insertOrderItemNodebyStax(OrderDTO orderDTO) {
+    public Boolean insertOrderItemNodebyStax(OrderDTO orderDTO, String path) {
         InputStream is = null;
         OutputStream os = null;
         XMLEventReader reader = null;
         XMLEventWriter writer = null;
         try {
-            File f = new File(ManageConstantService.orderUnSavedFilePath);
+            File f = new File(path + ManageConstantService.orderUnSavedFilePath);
             OrderItem orderItem = convertDTOtoJaxbItem(orderDTO);
             Orders orders = new Orders();
             orders.getOrderItem().add(orderItem);
@@ -163,14 +163,14 @@ public class OrderService implements Serializable {
                 marshall.setProperty(Marshaller.JAXB_ENCODING, "UTF-8");
                 QName qName = new QName("jaxb.orders", "orders");
                 JAXBElement<Orders> root = new JAXBElement<>(qName, Orders.class, orders);
-                marshall.marshal(root, new FileOutputStream(ManageConstantService.orderUnSavedFilePath));
+                marshall.marshal(root, new FileOutputStream(path + ManageConstantService.orderUnSavedFilePath));
                 return true;
             } else {
                 XMLInputFactory xif = XMLInputFactory.newInstance();
-                is = new FileInputStream(ManageConstantService.orderUnSavedFilePath);
+                is = new FileInputStream(path + ManageConstantService.orderUnSavedFilePath);
                 reader = xif.createXMLEventReader(is);
                 XMLOutputFactory xof = XMLOutputFactory.newInstance();
-                os = new FileOutputStream(ManageConstantService.orderUnSavedFilePath + ".new");
+                os = new FileOutputStream(path + ManageConstantService.orderUnSavedFilePath + ".new");
                 writer = xof.createXMLEventWriter(os);
                 JAXBContext jaxb = JAXBContext.newInstance(OrderItem.class);
                 Unmarshaller unmarshall = jaxb.createUnmarshaller();
@@ -195,11 +195,11 @@ public class OrderService implements Serializable {
                 writer.close();
                 is.close();
                 os.close();
-                File file = new File(ManageConstantService.orderUnSavedFilePath);
+                File file = new File(path + ManageConstantService.orderUnSavedFilePath);
                 file.delete();
                 file = null;
-                file = new File(ManageConstantService.orderUnSavedFilePath + ".new");
-                file.renameTo(new File(ManageConstantService.orderUnSavedFilePath));
+                file = new File(path + ManageConstantService.orderUnSavedFilePath + ".new");
+                file.renameTo(new File(path + ManageConstantService.orderUnSavedFilePath));
                 return true;
             }
 

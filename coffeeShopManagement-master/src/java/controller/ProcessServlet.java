@@ -22,7 +22,6 @@ import service.ManageConstantService;
 @WebServlet(name = "ProcessServlet", urlPatterns = {"/ProcessServlet"})
 public class ProcessServlet extends HttpServlet {
 
-
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -37,18 +36,19 @@ public class ProcessServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         try {
+            String path = getServletContext().getRealPath("/");
             String button = request.getParameter("btnAction");
             String url = ManageConstantService.indexPage;
-            if(button == null){
-                
-            }else{
+            if (button == null) {
+
+            } else {
                 url = ManageConstantService.getMenuServlet;
             }
             RequestDispatcher rd = request.getRequestDispatcher(url);
             rd.forward(request, response);
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-        }finally{
+        } finally {
             out.close();
         }
     }

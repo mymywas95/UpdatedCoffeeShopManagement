@@ -72,7 +72,7 @@ public class ParseProductService implements Serializable {
         this.link = new HashMap<String, String>();
     }
 
-    public void getCompetitorData() {
+    public void getCompetitorData(String path) {
         CompetitorDAO competitorDAO = new CompetitorDAO();
         List<CompetitorDTO> competitorList = competitorDAO.getAllCompetitor();
         String filePath = "";
@@ -80,18 +80,18 @@ public class ParseProductService implements Serializable {
         String parsedDate = null;
         for (CompetitorDTO competitorDTO : competitorList) {
             if (competitorDTO.getName().equals("Dù Vàng")) {
-                filePath = ManageConstantService.downloadDuVangHTMLFile;
-                parsedDate = parseHTML(filePath, competitorDTO.getWebsiteAddress());
-                cateList = parseHTML(ManageConstantService.downloadDuVangCateHTMLFile, "http://duvangcoffee.com/api/data.php?type=category");
+                filePath = path + ManageConstantService.downloadDuVangHTMLFile;
+                parsedDate =  parseHTML(filePath, competitorDTO.getWebsiteAddress());
+                cateList = parseHTML(path + ManageConstantService.downloadDuVangCateHTMLFile, "http://duvangcoffee.com/api/data.php?type=category");
                 saveParsedDateToDb(competitorDTO, parsedDate, cateList, filePath);
             }
             if (competitorDTO.getName().equals("Uni Space")) {
-                filePath = ManageConstantService.downloadUniSpaceHTMLFile;
+                filePath = path +  ManageConstantService.downloadUniSpaceHTMLFile;
                 parsedDate = parseHTML(filePath, competitorDTO.getWebsiteAddress());
                 saveParsedDateToDb(competitorDTO, parsedDate, cateList, filePath);
             }
         }
-        File f = new File(ManageConstantService.listProductMashalled);
+        File f = new File(path + ManageConstantService.listProductMashalled);
         if (f.exists()) {
             f.delete();
         }
@@ -228,7 +228,7 @@ public class ParseProductService implements Serializable {
                                 } else {
                                     productItem.setPrice(0);
                                 }
-                                productItem.setCompetitorId(competitorDTO.getId());
+                                productItem.setCompetitorId(competitorDTOItem.getId());
                                 productItem.setProductId(productId);
                                 productItemDAO.addNewProductItem(productItem);
                             }
@@ -237,7 +237,7 @@ public class ParseProductService implements Serializable {
                     }
                 }
             } else {
-                ProductItem productItem1 = productItemDAO.findProductItembyProductIdAndcompetitorId(productPrice, competitorDTO.getId());
+                ProductItem productItem1 = productItemDAO.findProductItembyProductIdAndcompetitorId(checkExist, competitorDTO.getId());
                 if (productItem1 != null) {
                     Boolean createdProductItem = productItemDAO.updatePricebyId(productItem1.getId(), productPrice);
                     if (createdProductItem == false) {

@@ -44,11 +44,11 @@
                         <a class="btn" onclick="getStatisticInThisMonth()">Thống kê doanh thu theo ngày</a>
                     </div>
                     <div class="action-btn-item">
+                        <a class="btn" onclick="addNewTable()">Thêm bàn</a>
+                    </div>
+                     <div class="action-btn-item">
                         <a class="btn" onclick="printMenu()">In menu</a>
                         <!--<a class="btn" target="_blank" href="/coffeeShopManagement/PrintMenuServlet">In menu</a>-->
-                    </div>
-                    <div class="action-btn-item">
-                        <a class="btn" onclick="addNewTable()">Thêm bàn</a>
                     </div>
                     <div class="action-btn-item">
                         <a class="btn" href="/coffeeShopManagement/GetMenuServlet">Cập nhập menu</a>

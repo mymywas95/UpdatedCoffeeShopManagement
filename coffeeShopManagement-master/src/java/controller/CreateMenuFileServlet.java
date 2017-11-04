@@ -37,11 +37,11 @@ public class CreateMenuFileServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         String message = "fail";
         try {
-
+            String path = getServletContext().getRealPath("/");
             PrintToPdfService printToPdfService = new PrintToPdfService();
             String headername = request.getParameter("menu");
             JSONObject js = new JSONObject(headername);
-            Boolean menuXMLFile = printToPdfService.createMenuXMLFile(js);
+            Boolean menuXMLFile = printToPdfService.createMenuXMLFile(js, path);
             if (menuXMLFile == true) {
                 message = "success";
             }

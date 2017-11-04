@@ -6,21 +6,40 @@
                             Giá
                         </fo:block><fo:block font-size="11px" font-family="Arial" text-align-last="justify">TRÀ SỮA THẠCH THỦY TINH (YOGUST)<fo:leader leader-pattern="space"/>24k
                         </fo:block><fo:block font-size="11px" font-family="Arial" text-align-last="justify">TRÀ SỮA THẠCH TRÁI CÂY<fo:leader leader-pattern="space"/>24k
-                        </fo:block><fo:block font-size="11px" font-family="Arial" text-align-last="justify">TRÀ SỮA THÁI XANH<fo:leader leader-pattern="space"/>24k
-                        </fo:block><fo:block font-size="11px" font-family="Arial" text-align-last="justify">TRÀ SỮA THÁI ĐỎ<fo:leader leader-pattern="space"/>24k
-                        </fo:block><fo:block font-size="11px" font-family="Arial" text-align-last="justify">TRÀ SỮA BẠC HÀ<fo:leader leader-pattern="space"/>24k
-                        </fo:block><fo:block font-size="11px" font-family="Arial" text-align-last="justify">TRÀ SỮA ĐÀO<fo:leader leader-pattern="space"/>32k
-                        </fo:block><fo:block font-size="11px" font-family="Arial" text-align-last="justify">TRÀ SỮA BÁNH FLAN<fo:leader leader-pattern="space"/>32k
-                        </fo:block><fo:block margin-bottom="16px" border-bottom-style="dashed" font-size="16pt" text-align="center" font-family="Arial">CÀ PHÊ</fo:block><fo:block font-size="15px" font-family="Arial" text-align-last="justify">
+                        </fo:block><fo:block font-size="11px" font-family="Arial" text-align-last="justify">TRÀ SỮA CARAMEL SIZE M<fo:leader leader-pattern="space"/>29k
+                        </fo:block><fo:block font-size="11px" font-family="Arial" text-align-last="justify">TRÀ SỮA SOCOLA SIZE M<fo:leader leader-pattern="space"/>29k
+                        </fo:block><fo:block margin-bottom="16px" border-bottom-style="dashed" font-size="16pt" text-align="center" font-family="Arial">TRÀ</fo:block><fo:block font-size="15px" font-family="Arial" text-align-last="justify">
                             Tên sản phẩm
                             <fo:leader leader-pattern="space"/>
                             Giá
-                        </fo:block><fo:block font-size="11px" font-family="Arial" text-align-last="justify">CÀ PHÊ ĐEN<fo:leader leader-pattern="space"/>15k
-                        </fo:block><fo:block font-size="11px" font-family="Arial" text-align-last="justify">CÀ PHÊ SỮA<fo:leader leader-pattern="space"/>18k
-                        </fo:block><fo:block font-size="11px" font-family="Arial" text-align-last="justify">ICE ESPRESSO<fo:leader leader-pattern="space"/>22k
-                        </fo:block><fo:block font-size="11px" font-family="Arial" text-align-last="justify">VIETNAMESE ESPRESSO<fo:leader leader-pattern="space"/>25k
-                        </fo:block><fo:block font-size="11px" font-family="Arial" text-align-last="justify">CAPPUCCINO<fo:leader leader-pattern="space"/>30k
-                        </fo:block><fo:block font-size="11px" font-family="Arial" text-align-last="justify">HOT LATTE<fo:leader leader-pattern="space"/>28k
-                        </fo:block><fo:block font-size="11px" font-family="Arial" text-align-last="justify">FRAPPUCHINO<fo:leader leader-pattern="space"/>32k
-                        </fo:block><fo:block font-size="11px" font-family="Arial" text-align-last="justify">ICE LATTE<fo:leader leader-pattern="space"/>30k
+                        </fo:block><fo:block font-size="11px" font-family="Arial" text-align-last="justify">TRÀ CHANH<fo:leader leader-pattern="space"/>19k
+                        </fo:block><fo:block font-size="11px" font-family="Arial" text-align-last="justify">HỒNG TRÀ<fo:leader leader-pattern="space"/>19k
+                        </fo:block><fo:block font-size="11px" font-family="Arial" text-align-last="justify">TRÀ LIPTON<fo:leader leader-pattern="space"/>19k
+                        </fo:block><fo:block font-size="11px" font-family="Arial" text-align-last="justify">TRÀ VẢI<fo:leader leader-pattern="space"/>29k
+                        </fo:block><fo:block font-size="11px" font-family="Arial" text-align-last="justify">MINT TEA<fo:leader leader-pattern="space"/>20k
+                        </fo:block><fo:block font-size="11px" font-family="Arial" text-align-last="justify">GINGER TEA<fo:leader leader-pattern="space"/>20k
+                        </fo:block><fo:block font-size="11px" font-family="Arial" text-align-last="justify">HOT LIPTON<fo:leader leader-pattern="space"/>20k
+                        </fo:block><fo:block font-size="11px" font-family="Arial" text-align-last="justify">PEACH TEA<fo:leader leader-pattern="space"/>32k
+                        </fo:block><fo:block margin-bottom="16px" border-bottom-style="dashed" font-size="16pt" text-align="center" font-family="Arial">SODA</fo:block><fo:block font-size="15px" font-family="Arial" text-align-last="justify">
+                            Tên sản phẩm
+                            <fo:leader leader-pattern="space"/>
+                            Giá
+                        </fo:block><fo:block font-size="11px" font-family="Arial" text-align-last="justify">ROBIN SCHERBATSKY<fo:leader leader-pattern="space"/>29k
+                        </fo:block><fo:block font-size="11px" font-family="Arial" text-align-last="justify">BARNEY STINSON<fo:leader leader-pattern="space"/>29k
+                        </fo:block><fo:block font-size="11px" font-family="Arial" text-align-last="justify">TED MOSBY<fo:leader leader-pattern="space"/>29k
+                        </fo:block><fo:block font-size="11px" font-family="Arial" text-align-last="justify">RANJIT SINGH<fo:leader leader-pattern="space"/>29k
+                        </fo:block><fo:block margin-bottom="16px" border-bottom-style="dashed" font-size="16pt" text-align="center" font-family="Arial">SỮA LẮC</fo:block><fo:block font-size="15px" font-family="Arial" text-align-last="justify">
+                            Tên sản phẩm
+                            <fo:leader leader-pattern="space"/>
+                            Giá
+                        </fo:block><fo:block font-size="11px" font-family="Arial" text-align-last="justify">MATCHA MS<fo:leader leader-pattern="space"/>29k
+                        </fo:block><fo:block font-size="11px" font-family="Arial" text-align-last="justify">CHOCOLATE MS<fo:leader leader-pattern="space"/>29k
+                        </fo:block><fo:block margin-bottom="16px" border-bottom-style="dashed" font-size="16pt" text-align="center" font-family="Arial">SỮA CHUA LẮC</fo:block><fo:block font-size="15px" font-family="Arial" text-align-last="justify">
+                            Tên sản phẩm
+                            <fo:leader leader-pattern="space"/>
+                            Giá
+                        </fo:block><fo:block font-size="11px" font-family="Arial" text-align-last="justify">SCL CHANH DÂY<fo:leader leader-pattern="space"/>29k
+                        </fo:block><fo:block font-size="11px" font-family="Arial" text-align-last="justify">SCL NHO ĐEN<fo:leader leader-pattern="space"/>29k
+                        </fo:block><fo:block font-size="11px" font-family="Arial" text-align-last="justify">SCL VIỆT QUẤT<fo:leader leader-pattern="space"/>29k
+                        </fo:block><fo:block font-size="11px" font-family="Arial" text-align-last="justify">SCL DÂU<fo:leader leader-pattern="space"/>29k
                         </fo:block></fo:flow></fo:page-sequence></fo:root>

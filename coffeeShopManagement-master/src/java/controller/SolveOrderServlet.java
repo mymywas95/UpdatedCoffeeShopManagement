@@ -37,17 +37,18 @@ public class SolveOrderServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
+            String path = getServletContext().getRealPath("/");
             OrderService orderService = new OrderService();
             String headername = request.getParameter("order");
             JSONObject js = new JSONObject(headername);
             OrderDTO orderDTO = orderService.convertJsonToDTO(js);
-            boolean created = orderService.createNewBill(orderDTO);
+            boolean created = orderService.createNewBill(orderDTO, path);
             String message = "fail";
-            if(created == true){
+            if (created == true) {
                 message = "success";
             }
             out.write(message);
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

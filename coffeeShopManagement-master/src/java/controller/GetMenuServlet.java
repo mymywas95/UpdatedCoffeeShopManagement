@@ -38,15 +38,19 @@ public class GetMenuServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
+            String url = ManageConstantService.menuPage;
+            String path = getServletContext().getRealPath("/");
             MenuService menuService = new MenuService();
-            List<MenuDTO> listmMenuDTO = menuService.getAllMenuItem();
+            List<MenuDTO> listmMenuDTO = menuService.getAllMenuItem(path);
             request.setAttribute("ListAllMenuItem", listmMenuDTO);
             String message = "fail";
             if (listmMenuDTO != null) {
                 message = "success";
+            }else{
+                url = ManageConstantService.parseDataFromCompetitorWeb;
             }
             out.write(message);
-            RequestDispatcher rd = request.getRequestDispatcher(ManageConstantService.menuPage);
+            RequestDispatcher rd = request.getRequestDispatcher(url);
             rd.forward(request, response);
         }
     }

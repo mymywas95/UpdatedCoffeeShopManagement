@@ -38,6 +38,7 @@ public class StatisticServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
+            String path = getServletContext().getRealPath("/");
             StatisticService statisticService = new StatisticService();
             String headername = request.getParameter("dateRange");
             JSONObject js = new JSONObject(headername);
@@ -45,13 +46,13 @@ public class StatisticServlet extends HttpServlet {
             String endDate = js.getString("endDate");
             JSONObject rs = statisticService.getStatisticFromDateToDate(startDate, endDate);
             String resultObj = "";
-            if(rs != null){
+            if (rs != null) {
                 resultObj = rs.toString();
-            }else{
+            } else {
                 resultObj = "fail";
             }
             out.write(resultObj);
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

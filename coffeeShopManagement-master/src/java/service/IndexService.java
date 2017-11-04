@@ -32,13 +32,13 @@ import jaxb.orders.Orders;
  */
 public class IndexService implements Serializable {
 
-    public int checkDataBeforeLoad() {
+    public int checkDataBeforeLoad(String path) {
         try {
-            File orderUnsaveFile = new File(ManageConstantService.orderUnSavedFilePath);
+            File orderUnsaveFile = new File(path + ManageConstantService.orderUnSavedFilePath);
             if (orderUnsaveFile.exists() == true) {
-                insertorderUnsaveFileDatetoDB(ManageConstantService.orderUnSavedFilePath);
+                insertorderUnsaveFileDatetoDB( path + ManageConstantService.orderUnSavedFilePath, path);
             }
-            File productListFile = new File(ManageConstantService.listProductMashalled);
+            File productListFile = new File( path + ManageConstantService.listProductMashalled);
             if (productListFile.exists() == false) {
                 return 0;
             }
@@ -58,7 +58,7 @@ public class IndexService implements Serializable {
         }
     }
 
-    public void insertorderUnsaveFileDatetoDB(String filepath) {
+    public void insertorderUnsaveFileDatetoDB(String filepath, String rootPath) {
         try {
             JAXBContext contextObj = JAXBContext.newInstance(Orders.class);
             Unmarshaller unmarshallerObj = contextObj.createUnmarshaller();
@@ -73,7 +73,7 @@ public class IndexService implements Serializable {
                 OrderService orderService = new OrderService();
                 for (OrderItem orderItem : orders.getOrderItem()) {
                     OrderDTO orderDTO = convertJaxbToDto(orderItem);
-                    Boolean created = orderService.createNewBill(orderDTO);
+                    Boolean created = orderService.createNewBill(orderDTO, rootPath);
                 }
             }
         } catch (JAXBException ex) {
