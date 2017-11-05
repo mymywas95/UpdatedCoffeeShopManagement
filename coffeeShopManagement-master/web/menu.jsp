@@ -14,7 +14,7 @@
         <link href="css/coffeeShopStyle.css" rel="stylesheet" type="text/css"/>
         <title>PhêCàPhê</title>
     </head>
-    <body>
+    <body onload="setSelectedMenuItem()">
         <div class="header-lock">
             <div class="header-item">
                 <div class="logo-block">
@@ -44,50 +44,66 @@
                         <div class="all-product-list-title-item">Danh sách sản phẩm</div>
                     </div>
                     <div class="all-product-list-action">
-                          <a class="btn" href="/coffeeShopManagement/">Quay lại</a>
+                        <a class="btn" href="/coffeeShopManagement/">Quay lại</a>
                         <a class="btn btn-normal" onclick="saveToLocalStorage()">Cập nhập menu</a>
                         <!--                        <a class="btn" href="/coffeeShopManagement/ParseDataFromCompetitorWeb">Cập nhập danh sách sản phẩm</a>-->
                         <a class="btn" onclick="getProductCompetitor()">Cập nhập danh sách sản phẩm</a>
                     </div>
                 </div>
-                <div class="all-product-list-content">
-                    <ul class="all-product-list-content-block">
-                        <c:forEach var="AllMenuItem" items="${ListAllMenuItem}" >
-                            <li class="all-product-list-content-item">
-                                <div class="all-product-list-content-item-block">
-                                    <div class="all-product-category-block">
-                                        <div class="all-product-category-block-title">
-                                            ${AllMenuItem.categoryName}
+                <div class="content-list-menu-block">
+                    <div class="group-action-btn">
+                        <div class="action-btn-block">
+                            <c:forEach var="AllMenuItem" items="${ListAllMenuItem}" >
+                                <div class="action-btn-item">
+                                    <!--<a class="btn" onclick="scrollToCate(cate${AllMenuItem.categoryId})"> ${AllMenuItem.categoryName}</a>-->
+                                    <a class="btn" onclick="smoothScroll(document.getElementById('cate' +${AllMenuItem.categoryId}))"> ${AllMenuItem.categoryName}</a>
+
+                                </div>
+                            </c:forEach>
+                        </div>
+                    </div>
+
+                    <div class="content-management-block menu-list-block">
+                        <div class="all-product-block title">
+                            <ul>
+                                <li>Tên Sản Phẩm</li>
+                                <li>Không bán</li>
+                                <li>Giá <br>Dù vàng</li>
+                                <li>Giá <br>Unispace</li>
+                                <li>Định giá</li>
+                            </ul>
+                        </div>
+                        <ul class="all-product-list-content-block">
+                            <c:forEach var="AllMenuItem" items="${ListAllMenuItem}" >
+                                <li class="all-product-list-content-item">
+                                    <div class="all-product-list-content-item-block">
+                                        <div class="all-product-category-block" id="cate${AllMenuItem.categoryId}">
+                                            <div class="all-product-category-block-title">
+                                                ${AllMenuItem.categoryName}
+                                            </div>
+                                        </div>
+
+
+                                        <div class="all-product-block">
+                                            <c:forEach var="products" items="${AllMenuItem.listProduct}" >
+                                                <ul>
+                                                    <li>${products.name}</li>
+                                                    <li onclick="removeItemToMenu(this, '${AllMenuItem.categoryName}', '${products.name}')"><input type="radio" name="'${products.id}'"></li>
+                                                        <c:forEach var="productItem" items="${products.listProductItemDto}" >
+                                                        <li onclick="addItemToMenu(this, '${AllMenuItem.categoryName}', '${products.id}', '${products.name}', '${productItem.price}')">${productItem.price}k<input type="radio" name="'${products.id}'"></li>
+                                                        </c:forEach>
+                                                    <li onclick="valuation(this, '${AllMenuItem.categoryName}', '${products.id}', '${products.name}')"><input type="radio" name="'${products.id}'" id="product${products.id}"><input id="productPrice${products.id}" type="text" onclick="valuationProductPrice(this, '${AllMenuItem.categoryName}', '${products.id}', '${products.name}', '${productItem.price}')"></li>
+                                                </ul>
+                                            </c:forEach>
                                         </div>
                                     </div>
-                                    <div class="all-product-block title">
-                                        <ul>
-                                            <li>Tên Sản Phẩm</li>
-                                            <li>Không bán</li>
-                                            <li>Giá <br>Dù vàng</li>
-                                            <li>Giá <br>Unispace</li>
-                                            <li>Định giá</li>
-                                        </ul>
-                                    </div>
-                                    <div class="all-product-block">
-                                        <c:forEach var="products" items="${AllMenuItem.listProduct}" >
-                                            <ul>
-                                                <li>${products.name}</li>
-                                                <li onclick="removeItemToMenu(this, '${AllMenuItem.categoryName}', '${products.name}')"><input type="radio" name="'${products.id}'"></li>
-                                                    <c:forEach var="productItem" items="${products.listProductItemDto}" >
-                                                    <li onclick="addItemToMenu(this, '${AllMenuItem.categoryName}', '${products.id}', '${products.name}', '${productItem.price}')">${productItem.price}k<input type="radio" name="'${products.id}'"></li>
-                                                    </c:forEach>
-                                                <li onclick="valuation(this, '${AllMenuItem.categoryName}', '${products.id}', '${products.name}')"><input type="radio" name="'${products.id}'"><input type="number" onclick="valuationProductPrice(this, '${AllMenuItem.categoryName}', '${products.id}', '${products.name}', '${productItem.price}')"></li>
-                                            </ul>
-                                        </c:forEach>
-                                    </div>
-                                </div>
-                            </li>
-                        </c:forEach>
-                    </ul>
+                                </li>
+                            </c:forEach>    
+                        </ul>
+                    </div>
+
                 </div>
             </div>
-        </div>
     </body>
 
 </html>

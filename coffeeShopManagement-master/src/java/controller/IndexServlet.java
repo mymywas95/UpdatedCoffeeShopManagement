@@ -53,6 +53,9 @@ public class IndexServlet extends HttpServlet {
             }
             RequestDispatcher rd = request.getRequestDispatcher(url);
             rd.forward(request, response);
+        }catch(Exception e){
+            e.printStackTrace();
+            
         }
     }
 

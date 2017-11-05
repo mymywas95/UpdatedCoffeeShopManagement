@@ -79,6 +79,19 @@ body{
     border-radius: 3px;
     overflow-y: scroll;
 }
+.content-management-block.menu-list-block{
+    min-height: auto;
+    max-height: none;
+    overflow-y: hidden;
+
+}
+.content-management-block.menu-list-block .all-product-list-content-block{
+    min-height: 465px;
+    max-height: 465px;
+    background: #21374B;
+    color: #fff;
+    overflow-y: scroll;
+}
 
 .content-management-block::webkit-srollbar-track{
     /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);*/
@@ -91,7 +104,24 @@ body{
     border-radius: 10px;
     background: #000;
 }
+
 .content-management-block::-webkit-scrollbar-thumb:window-inactive, .content-management-block::-webkit-scrollbar{
+    width: 8px;
+}
+
+.content-management-block.menu-list-block .all-product-list-content-block::webkit-srollbar-track{
+    /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);*/
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.content-management-block.menu-list-block .all-product-list-content-block::-webkit-scrollbar-thumb{
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #367477;
+}
+
+.content-management-block.menu-list-block .all-product-list-content-block::-webkit-scrollbar-thumb:window-inactive, .content-management-block.menu-list-block .all-product-list-content-block::-webkit-scrollbar{
     width: 8px;
 }
 .table-management-block ul{
@@ -312,12 +342,14 @@ body{
     text-align: center;
 }
 .order-item-block ul li:first-child, .order-item-block-title ul li:first-child{
-      width: calc((100% /4) + (10% * 3));
-       text-align: left;
+    width: calc((100% /4) + (10% * 3));
+    text-align: left;
+    min-height: 35px
 }
 .order-item-block ul li:first-child i, .order-item-block-title ul li:first-child i{
     margin-right: 5px;
     cursor: pointer;
+    color: #be4248;
 }
 .order-item-block ul li:last-child,.product-list-block ul li:last-child{
     text-align: right;
@@ -377,7 +409,7 @@ body{
     width: calc((100%/3) + (15% * 2)) ;
 }
 .product-list-block ul li:not(:last-child), .order-item-block ul li:not(:last-child){
-    line-height: 25px;
+    line-height: 15px;
 }
 .category-title{
     font-size: 16px;
@@ -486,11 +518,11 @@ body{
 .all-product-block ul{
     height: 35px;
 }
-.all-product-block{
+/*.all-product-block{
     min-height: 200px;
     max-height: 200px;
     overflow-y: scroll;
-}
+}*/
 .all-product-block::webkit-srollbar-track{
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
     -webkit-border-radius: 10px;
@@ -509,9 +541,15 @@ body{
 .all-product-block.title{
     overflow-y: auto;
     min-height: auto;
-    max-height: auto;
+    max-height: none;
 }
-
+.all-product-block.title li{
+    line-height: 35px;
+    vertical-align: middle;
+}
+.all-product-block.title li:first-child{
+    padding-left: 10px;
+}
 .all-product-block ul li{
     float: left;
     width: 15%;
@@ -527,14 +565,14 @@ body{
     list-style: none;
     text-align: left;
 }
-.all-product-block ul li:last-child input[type="number"]{
+.all-product-block ul li:last-child input[type="text"]{
     width: 50%;
     background: white;
     border-radius: 3px;
     border: 1px solid #fff;
     opacity: 0;
 }
-.all-product-block ul input[type="radio"]:checked+input[type="number"]{
+.all-product-block ul input[type="radio"]:checked+input[type="text"]{
     opacity: 1;
 }
 .all-product-list-content, .all-product-list-content ul.all-product-list-content-block{
@@ -554,7 +592,7 @@ body{
 .all-product-list-content-item-block{
     padding: 5px 10px;
 }
-.all-product-list-content-item{
+.all-product-list-content-block{
     border-right: 1px dashed #ffb300;
 }
 .all-product-list-content-item:nth-child(even){
@@ -614,4 +652,10 @@ body{
 }
 .btn-cancel-order{
     float: left;
+}
+.body.in-transition {
+    transition: transform 900ms ease;
+}
+.content-list-menu-block{
+    margin-top: 15px
 }

@@ -5,7 +5,7 @@ function saveToLocalStorage() {
     localStorage.setItem("myMenu", JSON.stringify(s));
     var menuStored = localStorage.getItem("myMenu");
     if (typeof (menuStored) == "undefined" || menuStored == null) {
-       openModal("announceModal", "Cập nhập menu thất bại");
+        openModal("announceModal", "Cập nhập menu thất bại");
     } else {
         window.location.replace("http://localhost:8084/coffeeShopManagement/");
     }
@@ -122,4 +122,53 @@ function getProductCompetitor() {
     xhttp.open("POST", "/coffeeShopManagement/ParseDataFromCompetitorWeb");
     xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
     xhttp.send();
+}
+function scrollToCate(cateId) {
+    var elmnt = cateId;
+    elmnt.scrollIntoView();
+}
+window.smoothScroll = function (target) {
+    var scrollContainer = target;
+    do { //find scroll container
+        scrollContainer = scrollContainer.parentNode;
+        if (!scrollContainer)
+            return;
+        scrollContainer.scrollTop += 1;
+    } while (scrollContainer.scrollTop == 0);
+
+    var targetY = 0;
+    do { //find the top of target relatively to the container
+        if (target == scrollContainer)
+            break;
+        targetY += target.offsetTop - 85;
+    } while (target = target.offsetParent);
+
+    scroll = function (c, a, b, i) {
+        i++;
+        if (i > 30)
+            return;
+        c.scrollTop = a + (b - a) / 30 * i;
+        setTimeout(function () {
+            scroll(c, a, b, i);
+        }, 20);
+    }
+    // start scrolling
+    scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+}
+function setSelectedMenuItem() {
+    var menuStored = localStorage.getItem("myMenu");
+    if (typeof (menuStored) == "undefined" || menuStored == null) {
+        openModal("announceModal", "Cập nhập menu thất bại");
+    } else {
+        var menuStoredParsed = JSON.parse(menuStored);
+        s = menuStoredParsed;
+        for (var i = 0; i < menuStoredParsed.menu.length; i++) {
+            for (var j = 0; j < menuStoredParsed.menu[i].productList.length; j++) {
+                var productId = "product" + menuStoredParsed.menu[i].productList[j].id;
+                var productPriceId = "productPrice" + menuStoredParsed.menu[i].productList[j].id;
+                document.getElementById(productPriceId).value = menuStoredParsed.menu[i].productList[j].price;
+                document.getElementById(productId).checked = !document.getElementById(productId).checked;
+            }
+        }
+    }
 }
