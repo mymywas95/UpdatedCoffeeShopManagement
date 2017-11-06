@@ -12,6 +12,6 @@
         <res-sharing-scope>Shareable</res-sharing-scope>
     </resource-ref>
     <welcome-file-list>
-        <welcome-file>IndexServlet</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
 </web-app>

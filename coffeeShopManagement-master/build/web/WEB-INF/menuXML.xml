@@ -17,6 +17,11 @@
             <name>TRÀ SỮA THÁI XANH</name>
             <price>24</price>
         </product>
+        <product>
+            <id>37</id>
+            <name>TRÀ SỮA THÁI ĐỎ</name>
+            <price>18</price>
+        </product>
     </category>
     <category>
         <name>TRÀ</name>
@@ -69,6 +74,11 @@
         <product>
             <id>26</id>
             <name>SÔ-CÔ-LA ĐX</name>
+            <price>34</price>
+        </product>
+        <product>
+            <id>27</id>
+            <name>COOKIE ĐX</name>
             <price>34</price>
         </product>
     </category>

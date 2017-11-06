@@ -3,8 +3,17 @@ var s = {
 };
 var o = {};
 function onloadFunction() {
+    openModal("announceModal", "Đang xử lý thông tin, vui lòng đợi trong giây lát");
     var menuStored = localStorage.getItem("myMenu");
-
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            openModal("announceModal","");
+        }
+    };
+    xhttp.open("GET", "/coffeeShopManagement/IndexServlet");
+    xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
+    xhttp.send();
     if (typeof (menuStored) == "undefined" || menuStored == null) {
         window.location.replace("http://localhost:8084/coffeeShopManagement/GetMenuServlet");
     } else {

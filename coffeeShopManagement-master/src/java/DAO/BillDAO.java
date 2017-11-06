@@ -29,11 +29,17 @@ public class BillDAO implements Serializable {
 
     public int addNewBill(Bill bill) {
         try {
-            EntityManager em = emf.createEntityManager();
-            em.getTransaction().begin();
-            em.persist(bill);
-            em.getTransaction().commit();
-            return bill.getId();
+            long start = System.currentTimeMillis();
+            long end = start + 7 * 1000; // 60 seconds * 1000 ms/sec
+            while (System.currentTimeMillis() < end) {
+                EntityManager em = emf.createEntityManager();
+                em.getTransaction().begin();
+                em.persist(bill);
+                em.getTransaction().commit();
+                return bill.getId();
+            }
+            return 0;
+
         } catch (Exception e) {
             e.printStackTrace();
             return 0;

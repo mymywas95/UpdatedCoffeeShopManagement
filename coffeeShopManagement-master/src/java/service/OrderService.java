@@ -196,11 +196,13 @@ public class OrderService implements Serializable {
                 is.close();
                 os.close();
                 File file = new File(path + ManageConstantService.orderUnSavedFilePath);
-                file.delete();
-                file = null;
-                file = new File(path + ManageConstantService.orderUnSavedFilePath + ".new");
-                file.renameTo(new File(path + ManageConstantService.orderUnSavedFilePath));
-                return true;
+                if (file.delete()) {
+                    file = null;
+                    file = new File(path + ManageConstantService.orderUnSavedFilePath + ".new");
+                    file.renameTo(new File(path + ManageConstantService.orderUnSavedFilePath));
+                    return true;
+                }
+                return false;
             }
 
         } catch (Exception e) {

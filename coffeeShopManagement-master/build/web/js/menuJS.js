@@ -116,7 +116,7 @@ function getProductCompetitor() {
             }
         } else {
             if (!hasClass(el, 'show')) {
-                openModal("announceModal", "Việc cập nhập thông tin sản phẩm sẽ mất nhiều thời gian, vui lòng đợi trong giây lát");
+                openModal("announceModal", "Việc cập nhập thông tin sản phẩm sẽ mất nhiều thời gian, vui lòng không thoát khỏi màn hình hiện tại");
             }
         }
     };

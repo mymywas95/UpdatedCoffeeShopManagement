@@ -7,6 +7,7 @@
                         </fo:block><fo:block font-size="11px" font-family="Arial" text-align-last="justify">TRÀ SỮA THẠCH THỦY TINH (YOGUST)<fo:leader leader-pattern="space"/>24k
                         </fo:block><fo:block font-size="11px" font-family="Arial" text-align-last="justify">TRÀ SỮA THẠCH TRÁI CÂY<fo:leader leader-pattern="space"/>24k
                         </fo:block><fo:block font-size="11px" font-family="Arial" text-align-last="justify">TRÀ SỮA THÁI XANH<fo:leader leader-pattern="space"/>24k
+                        </fo:block><fo:block font-size="11px" font-family="Arial" text-align-last="justify">TRÀ SỮA THÁI ĐỎ<fo:leader leader-pattern="space"/>18k
                         </fo:block><fo:block margin-bottom="16px" border-bottom-style="dashed" font-size="16pt" text-align="center" font-family="Arial">TRÀ</fo:block><fo:block font-size="15px" font-family="Arial" text-align-last="justify">
                             Tên sản phẩm
                             <fo:leader leader-pattern="space"/>
@@ -28,6 +29,7 @@
                             Giá
                         </fo:block><fo:block font-size="11px" font-family="Arial" text-align-last="justify">MATCHA ĐX<fo:leader leader-pattern="space"/>34k
                         </fo:block><fo:block font-size="11px" font-family="Arial" text-align-last="justify">SÔ-CÔ-LA ĐX<fo:leader leader-pattern="space"/>34k
+                        </fo:block><fo:block font-size="11px" font-family="Arial" text-align-last="justify">COOKIE ĐX<fo:leader leader-pattern="space"/>34k
                         </fo:block><fo:block margin-bottom="16px" border-bottom-style="dashed" font-size="16pt" text-align="center" font-family="Arial">ĐẶC BIỆT</fo:block><fo:block font-size="15px" font-family="Arial" text-align-last="justify">
                             Tên sản phẩm
                             <fo:leader leader-pattern="space"/>
