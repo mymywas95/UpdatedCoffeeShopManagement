@@ -574,3 +574,57 @@ function getDataCompetitor(competitorName) {
     xhttp.setRequestHeader("Content-Type", "text/html");
     xhttp.send();
 }
+function solveOrder(tableId) {
+
+    openModal("announceModal", "Order đang được xử lý...");
+    var orderStored = localStorage.getItem("order");
+    var orderStoredParsed = JSON.parse(orderStored);
+    var tableInformation;
+    for (var i = 0; i < orderStoredParsed.order.length; i++) {
+        if (orderStoredParsed.order[i].tableId == tableId) {
+            tableInformation = orderStoredParsed.order[i];
+//           orderStoredParsed.order[i].tableStatus = "Đã Thanh toán";
+//           orderStoredParsed.order[i].tableTotal = "0";
+//           orderStoredParsed.order[i].productList = [];
+
+            break;
+        }
+    }
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        var el = document.getElementById("MenuModal");
+        if (hasClass(el, 'show')) {
+            removeClass(el, 'show');
+        }
+        if (this.readyState == 4 && this.status == 200) {
+            if (this.responseText == "success") {
+                openModal("announceModal", "");
+                for (var i = 0; i < orderStoredParsed.order.length; i++) {
+                    if (orderStoredParsed.order[i].tableId == tableInformation.tableId) {
+                        orderStoredParsed.order[i].tableStatus = "Đã Thanh toán";
+                        orderStoredParsed.order[i].tableTotal = 0;
+                        orderStoredParsed.order[i].productList = [];
+                        localStorage.setItem("order", JSON.stringify(orderStoredParsed));
+                        setOrderContent(orderStoredParsed.order[i], 1);
+                        break;
+                    }
+                }
+                var myNodePay = document.getElementsByClassName("table-management-item");
+                if (typeof (myNodePay[0]) !== "undefined") {
+                    while (myNodePay[0]) {
+                        myNodePay[0].parentNode.removeChild(myNodePay[0]);
+                    }
+                }
+                setTableList();
+            } else {
+                openModal("announceModal", "");
+                openModal("announceModal", "Thanh toán thất bại");
+            }
+
+        }
+    };
+    xhttp.open("POST", "/coffeeShopManagement/SolveOrderServlet");
+    xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
+    xhttp.send("order=" + JSON.stringify(tableInformation));
+
+}

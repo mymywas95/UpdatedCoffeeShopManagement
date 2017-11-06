@@ -13,26 +13,21 @@
             <price>24</price>
         </product>
         <product>
-            <id>82</id>
-            <name>TRÀ SỮA CARAMEL SIZE M</name>
-            <price>29</price>
-        </product>
-        <product>
-            <id>83</id>
-            <name>TRÀ SỮA SOCOLA SIZE M</name>
-            <price>29</price>
+            <id>36</id>
+            <name>TRÀ SỮA THÁI XANH</name>
+            <price>24</price>
         </product>
     </category>
     <category>
         <name>TRÀ</name>
         <product>
-            <id>5</id>
-            <name>TRÀ CHANH</name>
+            <id>4</id>
+            <name>HỒNG TRÀ</name>
             <price>19</price>
         </product>
         <product>
-            <id>4</id>
-            <name>HỒNG TRÀ</name>
+            <id>5</id>
+            <name>TRÀ CHANH</name>
             <price>19</price>
         </product>
         <product>
@@ -40,89 +35,54 @@
             <name>TRÀ LIPTON</name>
             <price>19</price>
         </product>
-        <product>
-            <id>7</id>
-            <name>TRÀ VẢI</name>
-            <price>29</price>
-        </product>
-        <product>
-            <id>60</id>
-            <name>MINT TEA</name>
-            <price>20</price>
-        </product>
-        <product>
-            <id>61</id>
-            <name>GINGER TEA</name>
-            <price>20</price>
-        </product>
-        <product>
-            <id>59</id>
-            <name>HOT LIPTON</name>
-            <price>20</price>
-        </product>
-        <product>
-            <id>58</id>
-            <name>PEACH TEA</name>
-            <price>32</price>
-        </product>
     </category>
     <category>
         <name>SODA</name>
         <product>
-            <id>10</id>
-            <name>ROBIN SCHERBATSKY</name>
+            <id>16</id>
+            <name>TRACY MCCONNELL</name>
             <price>29</price>
         </product>
         <product>
-            <id>11</id>
-            <name>BARNEY STINSON</name>
+            <id>15</id>
+            <name>ZOEY PIERSON</name>
             <price>29</price>
         </product>
         <product>
-            <id>12</id>
-            <name>TED MOSBY</name>
+            <id>64</id>
+            <name>SODA VIỆT QUẤT</name>
             <price>29</price>
         </product>
         <product>
-            <id>13</id>
-            <name>RANJIT SINGH</name>
-            <price>29</price>
-        </product>
-    </category>
-    <category>
-        <name>SỮA LẮC</name>
-        <product>
-            <id>23</id>
-            <name>MATCHA MS</name>
-            <price>29</price>
-        </product>
-        <product>
-            <id>24</id>
-            <name>CHOCOLATE MS</name>
-            <price>29</price>
+            <id>65</id>
+            <name>SODA NHO ĐEN</name>
+            <price>28</price>
         </product>
     </category>
     <category>
-        <name>SỮA CHUA LẮC</name>
+        <name>ĐÁ XAY</name>
         <product>
-            <id>17</id>
-            <name>SCL CHANH DÂY</name>
+            <id>25</id>
+            <name>MATCHA ĐX</name>
+            <price>34</price>
+        </product>
+        <product>
+            <id>26</id>
+            <name>SÔ-CÔ-LA ĐX</name>
+            <price>34</price>
+        </product>
+    </category>
+    <category>
+        <name>ĐẶC BIỆT</name>
+        <product>
+            <id>53</id>
+            <name>LEMON SNOW</name>
             <price>29</price>
         </product>
         <product>
-            <id>18</id>
-            <name>SCL NHO ĐEN</name>
-            <price>29</price>
-        </product>
-        <product>
-            <id>19</id>
-            <name>SCL VIỆT QUẤT</name>
-            <price>29</price>
-        </product>
-        <product>
-            <id>20</id>
-            <name>SCL DÂU</name>
-            <price>29</price>
+            <id>54</id>
+            <name>UNICHOCO</name>
+            <price>38</price>
         </product>
     </category>
 </menu>

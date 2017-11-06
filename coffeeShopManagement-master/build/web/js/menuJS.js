@@ -108,10 +108,11 @@ function getProductCompetitor() {
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             openModal("announceModal", "");
-            if (this.responseText == "success") {
-                window.location.replace("http://localhost:8084/coffeeShopManagement/GetMenuServlet");
-            } else {
+            if (this.responseText == "fail") {
                 openModal("announceModal", "Cập nhập thất bại");
+
+            } else {
+                window.location.replace("http://localhost:8084/coffeeShopManagement/GetMenuServlet");
             }
         } else {
             if (!hasClass(el, 'show')) {
@@ -158,7 +159,7 @@ window.smoothScroll = function (target) {
 function setSelectedMenuItem() {
     var menuStored = localStorage.getItem("myMenu");
     if (typeof (menuStored) == "undefined" || menuStored == null) {
-        openModal("announceModal", "Cập nhập menu thất bại");
+//        openModal("announceModal", "Ch");
     } else {
         var menuStoredParsed = JSON.parse(menuStored);
         s = menuStoredParsed;

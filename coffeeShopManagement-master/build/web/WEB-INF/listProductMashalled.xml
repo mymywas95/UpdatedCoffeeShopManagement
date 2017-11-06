@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ns2:listCategory xmlns="http://www.coffeeShop.com.vn" xmlns:ns2="jaxb.listcategory">
     <category>
-        <id>2</id>
+        <id>1</id>
         <name>TRÀ SỮA</name>
         <product>
             <id>1</id>
@@ -329,7 +329,7 @@
         </product>
     </category>
     <category>
-        <id>3</id>
+        <id>2</id>
         <name>CÀ PHÊ</name>
         <product>
             <id>2</id>
@@ -501,7 +501,7 @@
         </product>
     </category>
     <category>
-        <id>4</id>
+        <id>3</id>
         <name>TRÀ</name>
         <product>
             <id>4</id>
@@ -649,7 +649,7 @@
         </product>
     </category>
     <category>
-        <id>5</id>
+        <id>4</id>
         <name>SODA</name>
         <product>
             <id>9</id>
@@ -821,7 +821,7 @@
         </product>
     </category>
     <category>
-        <id>6</id>
+        <id>5</id>
         <name>SỮA CHUA LẮC</name>
         <product>
             <id>17</id>
@@ -897,7 +897,7 @@
         </product>
     </category>
     <category>
-        <id>7</id>
+        <id>6</id>
         <name>SỮA LẮC</name>
         <product>
             <id>23</id>
@@ -925,7 +925,7 @@
         </product>
     </category>
     <category>
-        <id>8</id>
+        <id>7</id>
         <name>ĐÁ XAY</name>
         <product>
             <id>25</id>
@@ -1061,7 +1061,7 @@
         </product>
     </category>
     <category>
-        <id>9</id>
+        <id>8</id>
         <name>PHỤ PHÍ</name>
         <product>
             <id>40</id>
@@ -1077,7 +1077,7 @@
         </product>
     </category>
     <category>
-        <id>10</id>
+        <id>9</id>
         <name>ĐẶC BIỆT</name>
         <product>
             <id>53</id>

@@ -20,7 +20,6 @@ function removeClass(el, className) {
 }
 function openModal(modalId, content) {
     var el = document.getElementById(modalId);
-    debugger;
     var tableExist = false;
     if (hasClass(el, 'show')) {
         removeClass(el, 'show');

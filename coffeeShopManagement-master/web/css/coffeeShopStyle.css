@@ -351,6 +351,9 @@ body{
     cursor: pointer;
     color: #be4248;
 }
+.order-item-block ul li:first-child i:hover, .order-item-block-title ul li:first-child i:hover{
+    color: #f06060;
+}
 .order-item-block ul li:last-child,.product-list-block ul li:last-child{
     text-align: right;
 }
@@ -409,7 +412,7 @@ body{
     width: calc((100%/3) + (15% * 2)) ;
 }
 .product-list-block ul li:not(:last-child), .order-item-block ul li:not(:last-child){
-    line-height: 15px;
+    line-height: 25px;
 }
 .category-title{
     font-size: 16px;
@@ -538,13 +541,16 @@ body{
 .all-product-block::-webkit-scrollbar{
     width: 8px;
 }
-.all-product-block.title{
+/*.all-product-block.title{
     overflow-y: auto;
     min-height: auto;
     max-height: none;
+}*/
+.all-product-block.title ul{
+    height: 30px;
 }
-.all-product-block.title li{
-    line-height: 35px;
+.all-product-block.title li:nth-child(1), .all-product-block.title li:nth-child(2), .all-product-block.title li:nth-child(5){
+    line-height: 30px;
     vertical-align: middle;
 }
 .all-product-block.title li:first-child{

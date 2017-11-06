@@ -50,11 +50,11 @@ public class ParseDataFromCompetitorWeb extends HttpServlet {
                 message = "fail";
                 e.printStackTrace();
             } finally {
+                out.write(message);
                 if (message.equals("success")) {
                     RequestDispatcher rd = request.getRequestDispatcher(url);
                     rd.forward(request, response);
                 }
-                out.write(message);
                 out.close();
             }
         }

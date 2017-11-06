@@ -67,7 +67,7 @@ public class IndexService implements Serializable {
                     f), Orders.class);
             Orders orders = root.getValue();
             if (orders.getOrderItem().size() > 0) {
-                File file = new File(ManageConstantService.orderUnSavedFilePath);
+                File file = new File(rootPath + ManageConstantService.orderUnSavedFilePath);
                 file.delete();
                 List<OrderDTO> listOrderDTO = new ArrayList<OrderDTO>();
                 OrderService orderService = new OrderService();

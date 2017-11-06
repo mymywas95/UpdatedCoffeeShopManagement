@@ -5,11 +5,9 @@
         <group>
             <file>file:/E:/FPT/XML/final_Project/coffeeShopManagement-master/web/js/menuJS.js</file>
             <file>file:/E:/FPT/XML/final_Project/coffeeShopManagement-master/web/menu.jsp</file>
-            <file>file:/E:/FPT/XML/final_Project/coffeeShopManagement-master/web/index.jsp</file>
+            <file>file:/E:/FPT/XML/final_Project/coffeeShopManagement-master/web/WEB-INF/web.xml</file>
+            <file>file:/E:/FPT/XML/final_Project/coffeeShopManagement-master/src/java/controller/IndexServlet.java</file>
             <file>file:/E:/FPT/XML/final_Project/coffeeShopManagement-master/web/css/coffeeShopStyle.css</file>
-            <file>file:/E:/FPT/XML/final_Project/coffeeShopManagement-master/web/WEB-INF/menuFO.xsl</file>
-            <file>file:/E:/FPT/XML/final_Project/coffeeShopManagement-master/web/js/coffeeShopJs.js</file>
-            <file>file:/E:/FPT/XML/final_Project/coffeeShopManagement-master/src/java/service/PrintToPdfService.java</file>
         </group>
     </open-files>
 </project-private>

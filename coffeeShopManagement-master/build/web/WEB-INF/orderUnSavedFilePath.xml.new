@@ -1,0 +1,29 @@
+<?xml version="1.0" ?><ns2:orders xmlns="http://www.coffeeShop.com.vn" xmlns:ns2="jaxb.orders">
+    <orderItem>
+        <listBillItemDTO>
+            <billId>0</billId>
+            <productId>37</productId>
+            <quantity>1</quantity>
+        </listBillItemDTO>
+        <listBillItemDTO>
+            <billId>0</billId>
+            <productId>36</productId>
+            <quantity>1</quantity>
+        </listBillItemDTO>
+        <listBillItemDTO>
+            <billId>0</billId>
+            <productId>4</productId>
+            <quantity>1</quantity>
+        </listBillItemDTO>
+        <listBillItemDTO>
+            <billId>0</billId>
+            <productId>5</productId>
+            <quantity>1</quantity>
+        </listBillItemDTO>
+        <note></note>
+        <paymentDate>2017-11-06</paymentDate>
+        <promotion>0</promotion>
+        <tableName>1</tableName>
+        <total>80</total>
+    </orderItem>
+<orderItem><listBillItemDTO><billId>0</billId><productId>1</productId><quantity>1</quantity></listBillItemDTO><listBillItemDTO><billId>0</billId><productId>35</productId><quantity>1</quantity></listBillItemDTO><listBillItemDTO><billId>0</billId><productId>37</productId><quantity>1</quantity></listBillItemDTO><listBillItemDTO><billId>0</billId><productId>5</productId><quantity>1</quantity></listBillItemDTO><note></note><paymentDate>2017-11-06</paymentDate><promotion>0</promotion><tableName>1</tableName><total>85</total></orderItem></ns2:orders>
